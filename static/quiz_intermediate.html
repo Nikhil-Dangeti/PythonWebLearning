@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Quiz - Python Learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="dashboard.html">Home</a></li>
+            <li class="nav-item"><a href="reference.html">References</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+   
+    <!-- Quiz Section -->
+     <div class="content">
+    <h1 class="section-title">Intermediate Python Quiz</h1>
+    <form id="quizForm" onsubmit="calculateScore(event)">
+        <div class="question">
+            <p><strong>1. What will be the output of the following code?</strong></p>
+            <pre class="code-block">
+def multiply(a, b=2):
+    return a * b
+
+print(multiply(3))
+            </pre>
+            <div class="option"><input type="radio" name="q1" value="a"> <span>a) 3</span></div>
+            <div class="option"><input type="radio" name="q1" value="b"> <span>b) 6</span></div>
+            <div class="option"><input type="radio" name="q1" value="c"> <span>c) 9</span></div>
+            <div class="option"><input type="radio" name="q1" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>2. What does the following lambda function do?</strong></p>
+            <pre class="code-block">
+cube = lambda x: x ** 3
+print(cube(2))
+            </pre>
+            <div class="option"><input type="radio" name="q2" value="a"> <span>a) Returns 6</span></div>
+            <div class="option"><input type="radio" name="q2" value="b"> <span>b) Returns 8</span></div>
+            <div class="option"><input type="radio" name="q2" value="c"> <span>c) Returns 9</span></div>
+            <div class="option"><input type="radio" name="q2" value="d"> <span>d) Returns 4</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>3. What will be the output of the following code?</strong></p>
+            <pre class="code-block">
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(4))
+            </pre>
+            <div class="option"><input type="radio" name="q3" value="a"> <span>a) 24</span></div>
+            <div class="option"><input type="radio" name="q3" value="b"> <span>b) 12</span></div>
+            <div class="option"><input type="radio" name="q3" value="c"> <span>c) 6</span></div>
+            <div class="option"><input type="radio" name="q3" value="d"> <span>d) 8</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>4. What will be the output of the following list operation?</strong></p>
+            <pre class="code-block">
+numbers = [1, 2, 3, 4, 5]
+numbers[1:3] = [10, 20]
+print(numbers)
+            </pre>
+            <div class="option"><input type="radio" name="q4" value="a"> <span>a) [1, 10, 20, 4, 5]</span></div>
+            <div class="option"><input type="radio" name="q4" value="b"> <span>b) [1, 2, 3, 10, 20]</span></div>
+            <div class="option"><input type="radio" name="q4" value="c"> <span>c) [10, 20, 3, 4, 5]</span></div>
+            <div class="option"><input type="radio" name="q4" value="d"> <span>d) [1, 10, 20, 3, 4, 5]</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>5. What will be the output of the following code?</strong></p>
+            <pre class="code-block">
+numbers = [1, 2, 3, 4, 5]
+print(numbers[-2:])
+            </pre>
+            <div class="option"><input type="radio" name="q5" value="a"> <span>a) [4, 5]</span></div>
+            <div class="option"><input type="radio" name="q5" value="b"> <span>b) [3, 4]</span></div>
+            <div class="option"><input type="radio" name="q5" value="c"> <span>c) [5, 4]</span></div>
+            <div class="option"><input type="radio" name="q5" value="d"> <span>d) [1, 2]</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>6. What will be the output of the following tuple operation?</strong></p>
+            <pre class="code-block">
+tup = (1, 2, 3) + (4, 5)
+print(tup)
+            </pre>
+            <div class="option"><input type="radio" name="q6" value="a"> <span>a) (1, 2, 3, 4, 5)</span></div>
+            <div class="option"><input type="radio" name="q6" value="b"> <span>b) (1, 2, 3, 4)</span></div>
+            <div class="option"><input type="radio" name="q6" value="c"> <span>c) (1, 2, 3, 5)</span></div>
+            <div class="option"><input type="radio" name="q6" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>7. What will be the output of the following code?</strong></p>
+            <pre class="code-block">
+tup = (10, 20, 30, 40)
+print(tup[1:3])
+            </pre>
+            <div class="option"><input type="radio" name="q7" value="a"> <span>a) (10, 20)</span></div>
+            <div class="option"><input type="radio" name="q7" value="b"> <span>b) (20, 30)</span></div>
+            <div class="option"><input type="radio" name="q7" value="c"> <span>c) (30, 40)</span></div>
+            <div class="option"><input type="radio" name="q7" value="d"> <span>d) (10, 20, 30)</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>8. What will be the output of the following set operation?</strong></p>
+            <pre class="code-block">
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(set1.symmetric_difference(set2))
+            </pre>
+            <div class="option"><input type="radio" name="q8" value="a"> <span>a) {1, 2, 5, 6}</span></div>
+            <div class="option"><input type="radio" name="q8" value="b"> <span>b) {3, 4}</span></div>
+            <div class="option"><input type="radio" name="q8" value="c"> <span>c) {1, 2, 3, 4, 5, 6}</span></div>
+            <div class="option"><input type="radio" name="q8" value="d"> <span>d) {1, 2}</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>9. What will be the output of the following code?</strong></p>
+            <pre class="code-block">
+numbers = {1, 2, 3, 4, 5}
+numbers.discard(3)
+print(numbers)
+            </pre>
+            <div class="option"><input type="radio" name="q9" value="a"> <span>a) {1, 2, 4, 5}</span></div>
+            <div class="option"><input type="radio" name="q9" value="b"> <span>b) {1, 2, 3, 4, 5}</span></div>
+            <div class="option"><input type="radio" name="q9" value="c"> <span>c) {3}</span></div>
+            <div class="option"><input type="radio" name="q9" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>10. What will be the output of the following dictionary operation?</strong></p>
+            <pre class="code-block">
+d = {"a": 1, "b": 2}
+d.update({"c": 3})
+print(d)
+            </pre>
+            <div class="option"><input type="radio" name="q10" value="a"> <span>a) {'a': 1, 'b': 2, 'c': 3}</span></div>
+            <div class="option"><input type="radio" name="q10" value="b"> <span>b) {'a': 1, 'b': 2}</span></div>
+            <div class="option"><input type="radio" name="q10" value="c"> <span>c) {'c': 3}</span></div>
+            <div class="option"><input type="radio" name="q10" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>11. What will be the output of the following code?</strong></p>
+            <pre class="code-block">
+d = {"a": 1, "b": 2, "c": 3}
+print(d.get("b"))
+            </pre>
+            <div class="option"><input type="radio" name="q11" value="a"> <span>a) 1</span></div>
+            <div class="option"><input type="radio" name="q11" value="b"> <span>b) 2</span></div>
+            <div class="option"><input type="radio" name="q11" value="c"> <span>c) 3</span></div>
+            <div class="option"><input type="radio" name="q11" value="d"> <span>d) None</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>12. What will be the output of the following dictionary comprehension?</strong></p>
+            <pre class="code-block">
+d = {x: x*2 for x in range(1, 4)}
+print(d)
+            </pre>
+            <div class="option"><input type="radio" name="q12" value="a"> <span>a) {1: 2, 2: 4, 3: 6}</span></div>
+            <div class="option"><input type="radio" name="q12" value="b"> <span>b) {1: 1, 2: 2, 3: 3}</span></div>
+            <div class="option"><input type="radio" name="q12" value="c"> <span>c) {1: 3, 2: 6, 3: 9}</span></div>
+            <div class="option"><input type="radio" name="q12" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>13. What will be the output of the following nested dictionary access?</strong></p>
+            <pre class="code-block">
+d = {"student": {"name": "Alice", "age": 21}}
+print(d["student"]["age"])
+            </pre>
+            <div class="option"><input type="radio" name="q13" value="a"> <span>a) Alice</span></div>
+            <div class="option"><input type="radio" name="q13" value="b"> <span>b) 21</span></div>
+            <div class="option"><input type="radio" name="q13" value="c"> <span>c) {"name": "Alice", "age": 21}</span></div>
+            <div class="option"><input type="radio" name="q13" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>14. What will be the output of the following code using <code>defaultdict</code>?</strong></p>
+            <pre class="code-block">
+from collections import defaultdict
+d = defaultdict(int)
+d["a"] += 1
+print(d["a"])
+            </pre>
+            <div class="option"><input type="radio" name="q14" value="a"> <span>a) 0</span></div>
+            <div class="option"><input type="radio" name="q14" value="b"> <span>b) 1</span></div>
+            <div class="option"><input type="radio" name="q14" value="c"> <span>c) 2</span></div>
+            <div class="option"><input type="radio" name="q14" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <div class="question">
+            <p><strong>15. What will be the output of the following code?</strong></p>
+            <pre class="code-block">
+def sum_numbers(*args):
+    return sum(args)
+
+print(sum_numbers(1, 2, 3, 4))
+            </pre>
+            <div class="option"><input type="radio" name="q15" value="a"> <span>a) 10</span></div>
+            <div class="option"><input type="radio" name="q15" value="b"> <span>b) 6</span></div>
+            <div class="option"><input type="radio" name="q15" value="c"> <span>c) 8</span></div>
+            <div class="option"><input type="radio" name="q15" value="d"> <span>d) Error</span></div>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+
+    <!-- Popup for Score -->
+    <div id="scorePopup" class="popup">
+        <div class="popup-content">
+            <h2>Your Score</h2>
+            <p id="scoreDisplay"></p>
+            <div class="button-container">
+                <button onclick="showAnswers()">View Answers</button>
+                <button onclick="window.location.href='intermediate.html'">Exit</button>
+                <button onclick="window.location.href='intermediate.html'">Reattempt</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Answers Popup -->
+    <div id="answersPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="hideAnswers()">×</span>
+            <h2>Your Answers</h2>
+            <div id="answersDisplay"></div>
+            <div class="button-container">
+                <button onclick="hideAnswers()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const answers = {
+        q1: 'b', // 6 (3 * 2)
+        q2: 'b', // 8 (2^3)
+        q3: 'a', // 24 (4!)
+        q4: 'a', // [1, 10, 20, 4, 5]
+        q5: 'a', // [4, 5]
+        q6: 'a', // (1, 2, 3, 4, 5)
+        q7: 'b', // (20, 30)
+        q8: 'a', // {1, 2, 5, 6}
+        q9: 'a', // {1, 2, 4, 5}
+        q10: 'a', // {'a': 1, 'b': 2, 'c': 3}
+        q11: 'b', // 2
+        q12: 'a', // {1: 2, 2: 4, 3: 6}
+        q13: 'b', // 21
+        q14: 'b', // 1
+        q15: 'a' // 10
+    };
+
+    function calculateScore(event) {
+        event.preventDefault();
+        let score = 0;
+        const form = document.getElementById('quizForm');
+        const userAnswers = {
+            q1: form.q1.value,
+            q2: form.q2.value,
+            q3: form.q3.value,
+            q4: form.q4.value,
+            q5: form.q5.value,
+            q6: form.q6.value,
+            q7: form.q7.value,
+            q8: form.q8.value,
+            q9: form.q9.value,
+            q10: form.q10.value,
+            q11: form.q11.value,
+            q12: form.q12.value,
+            q13: form.q13.value,
+            q14: form.q14.value,
+            q15: form.q15.value
+        };
+
+        for (let q in answers) {
+            if (userAnswers[q] === answers[q]) score++;
+        }
+
+        const scorePopup = document.getElementById('scorePopup');
+        document.getElementById('scoreDisplay').textContent = `Your score: ${score} out of 15`;
+        scorePopup.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function showAnswers() {
+        const scorePopup = document.getElementById('scorePopup');
+        const answersPopup = document.getElementById('answersPopup');
+        const answersDisplay = document.getElementById('answersDisplay');
+        const form = document.getElementById('quizForm');
+        const userAnswers = {
+            q1: form.q1.value,
+            q2: form.q2.value,
+            q3: form.q3.value,
+            q4: form.q4.value,
+            q5: form.q5.value,
+            q6: form.q6.value,
+            q7: form.q7.value,
+            q8: form.q8.value,
+            q9: form.q9.value,
+            q10: form.q10.value,
+            q11: form.q11.value,
+            q12: form.q12.value,
+            q13: form.q13.value,
+            q14: form.q14.value,
+            q15: form.q15.value
+        };
+
+        answersDisplay.innerHTML = '';
+        for (let q in answers) {
+            const questionNum = q.replace('q', '');
+            const userAnswer = userAnswers[q] ? userAnswers[q] : 'Not answered';
+            const isCorrect = userAnswer === answers[q];
+            const answerClass = isCorrect ? 'correct' : 'wrong';
+            answersDisplay.innerHTML += `
+                <p><strong>Question ${questionNum}:</strong> ${document.querySelector(`input[name="${q}"][value="${answers[q]}"]`).parentElement.querySelector('span').textContent.trim()} <span class="${answerClass}">${isCorrect ? 'Correct' : 'Wrong'}</span><br>
+                Your answer: ${userAnswer === 'Not answered' ? 'Not answered' : document.querySelector(`input[name="${q}"][value="${userAnswer}"]`).parentElement.querySelector('span').textContent.trim()}</p>
+            `;
+        }
+        scorePopup.style.display = 'none';
+        answersPopup.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function hideAnswers() {
+        const answersPopup = document.getElementById('answersPopup');
+        const scorePopup = document.getElementById('scorePopup');
+        answersPopup.style.display = 'none';
+        scorePopup.style.display = 'flex';
+        document.body.style.overflow = 'auto'; // Restore background scrolling
+    }
+
+    // Close popups when navigating away
+    window.addEventListener('beforeunload', () => {
+        document.body.style.overflow = 'auto';
+    });
+</script>
+</html>

@@ -1,0 +1,431 @@
+/* Reset default styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1C2526; /* Dark gray background for the entire page */
+    color: #E0E0E0; /* Off-white text for readability */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #2C3E50; /* Darker gray for navbar */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-item a {
+    color: #E0E0E0; /* Off-white text for nav links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #00C4B4; /* Teal on hover */
+}
+
+/* Main Content (used in beginner.html, etc.) */
+.content {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2C3E50; /* Dark gray background for content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Titles (used across pages) */
+.section-title {
+    text-align: center;
+    color: #E0E0E0; /* Off-white title */
+    margin: 20px 0;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+/* Topic Sections (used in beginner.html) */
+.topic {
+    margin-bottom: 40px;
+}
+
+.topic-title {
+    color: #E0E0E0; /* Off-white for topic headings */
+    font-size: 1.5em;
+    border-bottom: 2px solid #00C4B4; /* Teal underline */
+    padding-bottom: 5px;
+}
+
+.topic-text {
+    line-height: 1.6;
+    color: #E0E0E0; /* Off-white text */
+}
+
+.topic-list {
+    margin-left: 20px;
+    color: #E0E0E0; /* Off-white for list items */
+}
+
+.topic-list li {
+    margin: 10px 0;
+}
+
+/* Sub-Topics (used in beginner.html) */
+.sub-topic {
+    margin: 20px 0;
+}
+
+.sub-title {
+    color: #1C2526; /* Dark text for contrast */
+    font-size: 1.2em;
+    background-color: #00C4B4; /* Teal background for sub-titles */
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* Operation Table (used in beginner.html) */
+.operation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    background-color: #34495E; /* Slightly lighter gray for table */
+}
+
+.operation-table th, .operation-table td {
+    border: 1px solid #00C4B4; /* Teal border */
+    padding: 8px;
+    text-align: left;
+    color: #E0E0E0; /* Off-white text */
+}
+
+.operation-table th {
+    background-color: #2C3E50; /* Dark gray for header */
+}
+
+/* Examples (used in beginner.html) */
+.example {
+    margin: 20px 0;
+}
+
+.example-title {
+    color: #E0E0E0; /* Off-white for example titles */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.code-block {
+    background-color: #1C2526; /* Darker gray for code */
+    color: #E0E0E0; /* Off-white text for code */
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    border: 1px solid #00C4B4; /* Teal border */
+}
+
+.example-explanation {
+    color: #E0E0E0; /* Off-white for explanations */
+    margin: 10px 0;
+}
+
+.example-output {
+    color: #E0E0E0; /* Off-white for output */
+    font-style: italic;
+    background-color: #34495E; /* Slightly lighter gray for output */
+    padding: 10px;
+    border-left: 4px solid #00C4B4; /* Teal border */
+    border-radius: 5px;
+}
+
+/* Quiz Button (used in beginner.html) */
+.quiz-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00C4B4; /* Teal button */
+    color: #1C2526; /* Dark text for contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quiz-btn:hover {
+    background-color: #E0E0E0; /* Off-white on hover */
+    color: #1C2526; /* Dark text */
+}
+
+/* Form Styling (for login/signup pages) */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #2C3E50; /* Dark gray form background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #00C4B4; /* Teal border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #34495E; /* Slightly lighter gray for inputs */
+    color: #E0E0E0; /* Off-white text */
+}
+
+button {
+    background-color: #00C4B4; /* Teal button */
+    color: #1C2526; /* Dark text */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E0E0E0; /* Off-white on hover */
+    color: #1C2526; /* Dark text */
+}
+
+/* Dashboard Styling (for dashboard.html) */
+.dashboard {
+    text-align: center;
+    padding: 50px;
+    background-color: #2C3E50; /* Dark gray dashboard background */
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.levels {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    background-color: #00C4B4; /* Teal boxes */
+    color: #1C2526; /* Dark text */
+    padding: 20px;
+    width: 150px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.box a {
+    color: #1C2526; /* Dark link text */
+    text-decoration: none;
+}
+
+.box:hover {
+    background-color: #E0E0E0; /* Off-white on hover */
+    color: #1C2526; /* Dark text */
+}
+
+.box a:hover {
+    color: #1C2526; /* Dark link text on hover */
+}
+
+/* Quiz Layout */
+
+/* Quiz Layout */
+.question {
+    margin-bottom: 30px;
+}
+
+.question p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    
+    margin: 8px 0;
+    color: #E0E0E0; /* Off-white text */
+}
+
+
+.option input[type="radio"] {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.option span {
+    flex-grow: 1;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00C4B4; /* Teal button */
+    color: #1C2526; /* Dark text */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #E0E0E0; /* Off-white on hover */
+    color: #1C2526;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #2C3E50; /* Dark gray background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; /* Limit height to 80% of viewport */
+    overflow-y: auto; /* Enable scrolling within popup if content overflows */
+    text-align: center;
+    color: #E0E0E0; /* Off-white text */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Close Button for Answers Popup */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #E0E0E0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #FF4D4D; /* Red on hover */
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #E0E0E0;
+}
+
+/* Button Container for Popup */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #00C4B4; /* Teal button */
+    color: #1C2526; /* Dark text */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #E0E0E0; /* Off-white on hover */
+    color: #1C2526;
+}
+
+/* Answers Display */
+#answersDisplay p {
+    text-align: left;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #34495E; /* Slightly lighter gray */
+}
+
+#answersDisplay .correct {
+    color: #00C4B4; /* Teal for correct answers */
+    font-weight: bold;
+}
+
+#answersDisplay .wrong {
+    color: #FF4D4D; /* Red for wrong answers */
+    font-weight: bold;
+}
+
+.view-btn, .download-btn {
+    display: inline-block;
+    margin: 5px 10px 0 0;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.view-btn {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+.download-btn {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #28a745;
+}
+
+.download-btn:hover {
+    background-color: #1e7e34;
+}
+
+.contact-submission-confirmation {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #34495E;
+    border-radius: 10px;
+    background-color: #34495E;
+}

@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner - Python Learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="dashboard.html">Home</a></li>
+            <li class="nav-item"><a href="reference.html">References</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1 class="section-title">Beginner Python</h1>
+
+        <!-- Print Statement -->
+        <section class="topic">
+            <h2 class="topic-title">Print Statement in Python</h2>
+            <p class="topic-text">
+                The <strong>print()</strong> function is used in Python to display output on the screen (terminal). It helps us print numbers, text, or multiple values easily.
+            </p>
+            <p class="topic-text">
+                <strong>How to Print Different Types of Values?</strong>
+            </p>
+            <div class="topic-text">
+                
+                    <strong>Printing a Number:</strong> Just give the number inside <code>print()</code>:
+                    <div class="example">
+                        <pre class="code-block">print(6)</pre>
+                        <p class="example-output"><strong>Output:</strong> 6</p>
+                    </div>
+                
+               
+                    <strong>Printing a Word (String):</strong> Use double quotes <code>" "</code> or single quotes <code>' '</code> for text:
+                    <div class="example">
+                        <pre class="code-block">
+print("nani")
+print('hello')
+                        </pre>
+                        <p class="example-output"><strong>Output:</strong><br>nani<br>hello</p>
+                    </div>
+                
+                    <strong>Printing a Single Character:</strong> We can print a single letter inside quotes:
+                    <div class="example">
+                        <pre class="code-block">print('a')</pre>
+                        <p class="example-output"><strong>Output:</strong> a</p>
+                    </div>
+               
+                    <strong>Printing Multiple Values Together:</strong> We can print different types of values together by separating them with commas:
+                    <div class="example">
+                        <pre class="code-block">print(1, 2, "ram")</pre>
+                        <p class="example-output"><strong>Output:</strong> 1 2 ram<br>(The values are separated by spaces by default.)</p>
+                    </div>
+                
+            </div>
+            <div class="example">
+                <h4 class="example-title">Example for Beginners</h4>
+                <pre class="code-block">
+print(10)
+print("Python is easy!")
+print("Number:", 25)
+                </pre>
+                <p class="example-output"><strong>Output:</strong><br>10<br>Python is easy!<br>Number: 25</p>
+            </div>
+        </section>
+
+        <!-- Variables -->
+        <section class="topic">
+            <h2 class="topic-title">Variables</h2>
+            <p class="topic-text">
+                A variable is like a container that stores data. It has a name and holds a value.
+            </p>
+            <p class="topic-text">
+                <strong>How to Create a Variable?</strong> In Python, we can create a variable by assigning a value using <strong>=</strong>.
+            </p>
+            <div class="example">
+                <pre class="code-block">
+x = 10
+name = "Nani"
+                </pre>
+                <p class="example-explanation">
+                    <strong>Explanation:</strong> <strong>x</strong> is a variable storing the number 10. <code>name</code> is a variable storing the text "Nani".
+                </p>
+            </div>
+            <p class="topic-text">
+                <strong>Rules for Naming Variables</strong><br>
+                ✅ Variable names can contain letters, numbers, and underscores (<code>_</code>).<br>
+                ✅ They must start with a letter or underscore, but not a number.<br>
+                ✅ Variable names are case-sensitive (Name and name are different).
+            </p>
+            <p class="topic-text">
+                <strong>Valid examples:</strong>
+            </p>
+            <div class="example">
+                <pre class="code-block">
+age = 25
+_name = "Ram"
+myVar = 3.5
+                </pre>
+            </div>
+            <p class="topic-text">
+                <strong>Invalid examples:</strong>
+            </p>
+            <div class="example">
+                <pre class="code-block">
+2name = "Sai"   # ❌ Cannot start with a number
+my-var = 50     # ❌ Cannot use hyphens (-)
+                </pre>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Example: Using Variables</h4>
+                <pre class="code-block">
+x = 5
+y = 10
+name = "Python"
+
+print(x)         # Prints 5
+print(y)         # Prints 10
+print(name)      # Prints Python
+                </pre>
+                <p class="example-output"><strong>Output:</strong><br>5<br>10<br>Python</p>
+            </div>
+        </section>
+
+        <!-- Operations -->
+        <section class="topic">
+            <h2 class="topic-title">Operations</h2>
+            <p class="topic-text">
+                Operations in Python: Arithmetic and Logical<br>
+                Python provides Arithmetic and Logical operations to perform calculations and decision-making.
+            </p>
+            <p class="topic-text">
+                <strong>1. Arithmetic Operations</strong><br>
+                Arithmetic operators are used to perform mathematical calculations like addition, subtraction, multiplication, etc.
+            </p>
+            <table class="operation-table">
+                <tr><th>Operator</th><th>Symbol</th><th>Example</th><th>Description</th></tr>
+                <tr><td>Addition</td><td>+</td><td>5 + 3 → 8</td><td>Adds two numbers</td></tr>
+                <tr><td>Subtraction</td><td>-</td><td>10 - 4 → 6</td><td>Subtracts one number from another</td></tr>
+                <tr><td>Multiplication</td><td>*</td><td>6 * 2 → 12</td><td>Multiplies two numbers</td></tr>
+                <tr><td>Division</td><td>/</td><td>8 / 2 → 4.0</td><td>Divides two numbers and gives a floating-point result</td></tr>
+                <tr><td>Floor Division</td><td>//</td><td>9 // 2 → 4</td><td>Divides and gives the whole number part (integer result)</td></tr>
+                <tr><td>Modulus</td><td>%</td><td>10 % 3 → 1</td><td>Gives the remainder after division</td></tr>
+                <tr><td>Exponentiation</td><td>**</td><td>2 ** 3 → 8</td><td>Raises a number to the power of another</td></tr>
+            </table>
+            <p class="topic-text">
+                <strong>2. Logical Operations</strong><br>
+                Logical operators are used to combine Boolean values (True or False) and perform decision-making.
+            </p>
+            <table class="operation-table">
+                <tr><th>Operator</th><th>Symbol</th><th>Example</th><th>Description</th></tr>
+                <tr><td>AND</td><td>and</td><td>True and False → False</td><td>Returns True if both conditions are True</td></tr>
+                <tr><td>OR</td><td>or</td><td>True or False → True</td><td>Returns True if at least one condition is True</td></tr>
+                <tr><td>NOT</td><td>not</td><td>not True → False</td><td>Reverses the Boolean value (True → False, False → True)</td></tr>
+            </table>
+            <div class="example">
+                <h4 class="example-title">Example Code: Arithmetic and Logical Operations</h4>
+                <pre class="code-block">
+# Arithmetic Operations
+a = 10
+b = 3
+
+print("Addition:", a + b)           # 10 + 3 = 13
+print("Subtraction:", a - b)        # 10 - 3 = 7
+print("Multiplication:", a * b)     # 10 * 3 = 30
+print("Division:", a / b)           # 10 / 3 = 3.3333
+print("Floor Division:", a // b)    # 10 // 3 = 3
+print("Modulus:", a % b)            # 10 % 3 = 1
+print("Exponentiation:", a ** b)    # 10 ** 3 = 1000
+
+# Logical Operations
+x = True
+y = False
+
+print("x AND y:", x and y)          # False (both should be True)
+print("x OR y:", x or y)            # True (at least one should be True)
+print("NOT x:", not x)              # False (opposite of True)
+                </pre>
+                <p class="example-output"><strong>Output:</strong><br>Addition: 13<br>Subtraction: 7<br>Multiplication: 30<br>Division: 3.3333333333333335<br>Floor Division: 3<br>Modulus: 1<br>Exponentiation: 1000<br>x AND y: False<br>x OR y: True<br>NOT x: False</p>
+            </div>
+        </section>
+
+        <!-- Conditional Statements -->
+        <section class="topic">
+            <h2 class="topic-title">Conditional Statements in Python</h2>
+            <p class="topic-text">
+                Conditional statements are used to make decisions in Python. They allow the program to execute different code blocks based on conditions.
+            </p>
+            <p class="topic-text">
+                <strong>1. Types of Conditional Statements</strong>
+            </p>
+            <div class="sub-topic">
+                <h3 class="sub-title">a) if Statement</h3>
+                <p class="topic-text">
+                    The if statement checks a condition. If the condition is True, it executes the code inside the if block.
+                </p>
+                <p class="topic-text">
+                    <strong>Syntax:</strong>
+                </p>
+                <pre class="code-block">
+if condition:
+    # Code to execute if condition is True
+                </pre>
+                <div class="example">
+                    <pre class="code-block">
+age = 18
+if age >= 18:
+    print("You are eligible to vote.")
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong> You are eligible to vote.</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">b) if-else Statement</h3>
+                <p class="topic-text">
+                    The if-else statement allows the program to execute one block if the condition is True and another block if it is False.
+                </p>
+                <p class="topic-text">
+                    <strong>Syntax:</strong>
+                </p>
+                <pre class="code-block">
+if condition:
+    # Code if condition is True
+else:
+    # Code if condition is False
+                </pre>
+                <div class="example">
+                    <pre class="code-block">
+num = 10
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong> Even number</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">c) if-elif-else Statement</h3>
+                <p class="topic-text">
+                    The if-elif-else statement is used when we have multiple conditions to check.
+                </p>
+                <p class="topic-text">
+                    <strong>Syntax:</strong>
+                </p>
+                <pre class="code-block">
+if condition1:
+    # Code if condition1 is True
+elif condition2:
+    # Code if condition2 is True
+else:
+    # Code if no conditions are True
+                </pre>
+                <div class="example">
+                    <pre class="code-block">
+marks = 85
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 80:
+    print("Grade: B")
+elif marks >= 70:
+    print("Grade: C")
+else:
+    print("Grade: D")
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong> Grade: B</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">d) Nested if Statements</h3>
+                <p class="topic-text">
+                    We can place an if statement inside another if statement, called nested if.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+num = 15
+if num > 10:
+    print("Number is greater than 10")
+    if num % 2 == 0:
+        print("It is an even number")
+    else:
+        print("It is an odd number")
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong><br>Number is greater than 10<br>It is an odd number</p>
+                </div>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Example 1: Check if a number is positive, negative, or zero</h4>
+                <pre class="code-block">
+num = int(input("Enter a number: "))
+
+if num > 0:
+    print("The number is positive.")
+elif num < 0:
+    print("The number is negative.")
+else:
+    print("The number is zero.")
+                </pre>
+                <p class="example-output"><strong>Sample Output:</strong><br>Enter a number: -5<br>The number is negative.</p>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Example 2: Find the largest number among three numbers</h4>
+                <pre class="code-block">
+a = 10
+b = 25
+c = 15
+
+if a > b and a > c:
+    print("Largest number is:", a)
+elif b > a and b > c:
+    print("Largest number is:", b)
+else:
+    print("Largest number is:", c)
+                </pre>
+                <p class="example-output"><strong>Output:</strong> Largest number is: 25</p>
+            </div>
+        </section>
+
+        <section class="topic">
+            <h2 class="topic-title">Indentation in Python</h2>
+            <p class="topic-text">
+                In Python, indentation is very important. It refers to the spaces at the beginning of a code line. Unlike many other programming languages that use curly braces <code>{ }</code> to define code blocks, Python uses indentation to define blocks of code.
+            </p>
+            <p class="topic-text">
+                Proper indentation is necessary for Python to understand the structure of the code. If the indentation is not consistent, Python will raise an <strong>IndentationError</strong>.
+            </p>
+            <p class="topic-text">
+                <strong>Rules of Indentation:</strong>
+            </p>
+            <ul class="topic-text">
+                <li>All statements within the same block must be indented at the same level.</li>
+                <li>Typically, 4 spaces are used for each indentation level (although tabs can be used, spaces are recommended).</li>
+                <li>Mixing tabs and spaces in indentation should be avoided.</li>
+            </ul>
+            <div class="example">
+                <h4 class="example-title">Example: Correct Indentation</h4>
+                <pre class="code-block">
+age = 20
+if age >= 18:
+    print("You are an adult.")
+    print("You can vote.")
+                </pre>
+                <p class="example-output"><strong>Output:</strong><br>You are an adult.<br>You can vote.</p>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Example: Incorrect Indentation</h4>
+                <pre class="code-block">
+age = 20
+if age >= 18:
+print("You are an adult.")
+print("You can vote.")
+                </pre>
+                <p class="example-output"><strong>Error:</strong><br>IndentationError: expected an indented block</p>
+            </div>
+        </section>
+        
+        <section class="topic">
+            <h2 class="topic-title">Mini Project 1: Movie Ticket Price Calculator</h2>
+            <p class="topic-text">
+                In this project, we will create a simple program to calculate the movie ticket price based on the age of a person. 
+                The program will use <strong>if-elif-else</strong> statements to determine the ticket price according to the age group.
+            </p>
+            <p class="topic-text">
+                <strong>Rules for Ticket Pricing:</strong>
+            </p>
+            <ul class="topic-text">
+                <li>Age less than 5 years: Ticket is free.</li>
+                <li>Age between 5 and 12 years: Ticket price is $10.</li>
+                <li>Age between 13 and 59 years: Ticket price is $20.</li>
+                <li>Age 60 years and above: Ticket price is $15.</li>
+            </ul>
+            <div class="example">
+                <h4 class="example-title">Code:</h4>
+                <pre class="code-block">
+age = int(input("Enter your age: "))
+
+if age < 5:
+    print("Ticket is free!")
+elif age >= 5 and age <= 12:
+    print("Ticket price is $10.")
+elif age >= 13 and age <= 59:
+    print("Ticket price is $20.")
+else:
+    print("Ticket price is $15.")
+                </pre>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Sample Output:</h4>
+                <p class="example-output">
+                    Enter your age: 8<br>
+                    Ticket price is $10.
+                </p>
+            </div>
+            <p class="topic-text">
+                <strong>Explanation:</strong><br>
+                The program first takes the user's age as input. It then checks the age through a series of <strong>if-elif-else</strong> conditions:
+                <ul class="topic-text">
+                    <li>If the age is less than 5, it prints "Ticket is free!".</li>
+                    <li>If the age is between 5 and 12, it prints "Ticket price is $10."</li>
+                    <li>If the age is between 13 and 59, it prints "Ticket price is $20."</li>
+                    <li>Otherwise, if the age is 60 or more, it prints "Ticket price is $15."</li>
+                </ul>
+                This project shows how to make decisions based on multiple conditions using <code>if-elif-else</code> statements in Python.
+            </p>
+        </section>
+        
+
+        <!-- String Operations -->
+        <section class="topic">
+            <h2 class="topic-title">String Operations in Python (Detailed Explanation)</h2>
+            <p class="topic-text">
+                A string in Python is a sequence of characters enclosed in single (<code>'</code>), double (<code>"</code>), or triple (<code>'''</code> or <code>"""</code>) quotes.
+            </p>
+            <div class="example">
+                <pre class="code-block">
+s1 = 'Hello'
+s2 = "Python"
+s3 = '''Welcome to Python'''
+                </pre>
+            </div>
+            <p class="topic-text">
+                <strong>1. String Operations in Python</strong><br>
+                Python provides various operations to manipulate strings, such as concatenation, slicing, repetition, searching, and modification.
+            </p>
+            <div class="sub-topic">
+                <h3 class="sub-title">A) String Concatenation (+ Operator)</h3>
+                <p class="topic-text">
+                    Concatenation means joining two or more strings using the + operator.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+str1 = "Hello"
+str2 = "World"
+result = str1 + " " + str2
+print(result)
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong> Hello World</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">B) String Repetition (* Operator)</h3>
+                <p class="topic-text">
+                    Repeats a string multiple times.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+word = "Python "
+print(word * 3)
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong> Python Python Python </p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">C) String Slicing ([] Operator)</h3>
+                <p class="topic-text">
+                    Extracts a portion of a string. Indexing starts from 0 in Python.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "Hello, Python!"
+print(text[0:5])   # Prints 'Hello'
+print(text[:5])    # Same as above
+print(text[7:])    # Prints 'Python!'
+print(text[-7:])   # Prints 'Python!'
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong><br>Hello<br>Hello<br>Python!<br>Python!</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">D) String Length (len() Function)</h3>
+                <p class="topic-text">
+                    Finds the length (number of characters) in a string.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "Python"
+print(len(text))
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong> 6</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">E) String Membership (in and not in Operators)</h3>
+                <p class="topic-text">
+                    Checks whether a substring is present in a string.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "Welcome to Python"
+print("Python" in text)      # True
+print("Java" not in text)    # True
+                    </pre>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">F) Converting Case (upper(), lower(), title(), capitalize())</h3>
+                <p class="topic-text">
+                    These methods change the case of letters in a string.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "Hello Python"
+
+print(text.upper())    # HELLO PYTHON
+print(text.lower())    # hello python
+print(text.title())    # Hello Python
+print(text.capitalize())  # Hello python
+                    </pre>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">G) Removing Spaces (strip(), lstrip(), rstrip())</h3>
+                <p class="topic-text">
+                    Removes extra spaces from a string.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "  Hello Python  "
+print(text.strip())   # "Hello Python" (removes spaces from both sides)
+print(text.lstrip())  # "Hello Python  " (removes left spaces)
+print(text.rstrip())  # "  Hello Python" (removes right spaces)
+                    </pre>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">H) String Replacement (replace())</h3>
+                <p class="topic-text">
+                    Replaces a part of a string with another string.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "I love Java"
+new_text = text.replace("Java", "Python")
+print(new_text)
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong> I love Python</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">I) Splitting and Joining Strings (split(), join())</h3>
+                <p class="topic-text">
+                    <code>split()</code> breaks a string into a list of words. <code>join()</code> joins a list of words into a single string.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "apple,banana,grapes"
+words = text.split(",")  # Splits string into a list
+print(words)
+
+sentence = " ".join(words)  # Joins list into a string
+print(sentence)
+                    </pre>
+                    <p class="example-output"><strong>Output:</strong><br>['apple', 'banana', 'grapes']<br>apple banana grapes</p>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">J) Finding Substrings (find(), index())</h3>
+                <p class="topic-text">
+                    <code>find()</code> returns the position of the first occurrence of a substring (-1 if not found). <code>index()</code> is similar but raises an error if the substring is not found.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text = "I love Python"
+print(text.find("Python"))  # 7
+print(text.find("Java"))    # -1 (not found)
+print(text.index("Python")) # 7
+                    </pre>
+                </div>
+            </div>
+            <div class="sub-topic">
+                <h3 class="sub-title">K) Checking String Type (isalpha(), isdigit(), isalnum())</h3>
+                <p class="topic-text">
+                    <code>isalpha()</code> → Returns True if all characters are letters.<br>
+                    <code>isdigit()</code> → Returns True if all characters are numbers.<br>
+                    <code>isalnum()</code> → Returns True if the string has letters and numbers only.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+text1 = "Python"
+text2 = "1234"
+text3 = "Python123"
+
+print(text1.isalpha())  # True
+print(text2.isdigit())  # True
+print(text3.isalnum())  # True
+                    </pre>
+                </div>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Example 1: Basic String Operations</h4>
+                <pre class="code-block">
+text = "Python Programming"
+
+print("Length of text:", len(text))
+print("Uppercase:", text.upper())
+print("Substring:", text[0:6])   # Python
+print("Replaced:", text.replace("Python", "Java"))
+                </pre>
+                <p class="example-output"><strong>Output:</strong><br>Length of text: 18<br>Uppercase: PYTHON PROGRAMMING<br>Substring: Python<br>Replaced: Java Programming</p>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Example 2: String Split and Join</h4>
+                <pre class="code-block">
+sentence = "Learn Python Programming"
+words = sentence.split()  # Splits by space
+print("Words:", words)
+
+new_sentence = "-".join(words)  # Joins with hyphen
+print("Joined:", new_sentence)
+                </pre>
+                <p class="example-output"><strong>Output:</strong><br>Words: ['Learn', 'Python', 'Programming']<br>Joined: Learn-Python-Programming</p>
+            </div>
+        </section>
+
+        <!-- Loops -->
+        <section class="topic">
+            <h2 class="topic-title">Loops in Python (Detailed Explanation)</h2>
+            <p class="topic-text">
+                Loops are used to execute a block of code multiple times. Python provides two main types of loops:
+            </p>
+            <p class="topic-text">
+                <strong>for loop</strong> – Used for iterating over sequences like lists, tuples, strings, etc.<br>
+                <strong>while loop</strong> – Used when the number of iterations is unknown and depends on a condition.
+            </p>
+        
+            <p class="topic-text">
+                <strong>1. for Loop</strong><br>
+                The for loop is used to iterate over sequences (lists, tuples, strings, dictionaries, sets, etc.).
+            </p>
+            <p class="topic-text">
+                <strong>Syntax:</strong>
+            </p>
+            <pre class="code-block">
+for variable in sequence:
+    # Code to execute in each iteration
+            </pre>
+        
+            <div class="example">
+                <h4 class="example-title">Example 1: Iterating over a List</h4>
+                <pre class="code-block">
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+                </pre>
+                <p class="example-explanation">
+                    This code iterates through each item in the list <code>fruits</code> and prints it one by one.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>apple<br>banana<br>cherry</p>
+            </div>
+        
+            <div class="example">
+                <h4 class="example-title">Example 2: Using range() in a for loop</h4>
+                <p class="topic-text">
+                    The <code>range(start, stop, step)</code> function generates a sequence of numbers.
+                </p>
+                <pre class="code-block">
+for i in range(1, 6):  # Numbers from 1 to 5
+    print(i)
+                </pre>
+                <p class="example-explanation">
+                    Here, <code>range(1, 6)</code> generates numbers from 1 to 5, and each number is printed in the loop.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>1<br>2<br>3<br>4<br>5</p>
+            </div>
+        
+            <div class="example">
+                <h4 class="example-title">Example 3: Looping Through a String</h4>
+                <pre class="code-block">
+word = "Python"
+for char in word:
+    print(char)
+                </pre>
+                <p class="example-explanation">
+                    The code iterates through each character of the string <code>word</code> and prints each character on a new line.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>P<br>y<br>t<br>h<br>o<br>n</p>
+            </div>
+        
+            <div class="example">
+                <h4 class="example-title">Example 4: Using else with for Loop</h4>
+                <p class="topic-text">
+                    The else block runs after the loop finishes successfully.
+                </p>
+                <pre class="code-block">
+for i in range(3):
+    print("Iteration:", i)
+else:
+    print("Loop finished successfully!")
+                </pre>
+                <p class="example-explanation">
+                    After completing all iterations, the <code>else</code> block is executed, printing a final message.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>Iteration: 0<br>Iteration: 1<br>Iteration: 2<br>Loop finished successfully!</p>
+            </div>
+        
+            <p class="topic-text">
+                <strong>2. while Loop</strong><br>
+                The while loop runs as long as a given condition is True.
+            </p>
+            <p class="topic-text">
+                <strong>Syntax:</strong>
+            </p>
+            <pre class="code-block">
+while condition:
+    # Code to execute
+            </pre>
+        
+            <div class="example">
+                <h4 class="example-title">Example 1: Basic while Loop</h4>
+                <pre class="code-block">
+count = 1
+while count <= 5:
+    print("Count:", count)
+    count += 1
+                </pre>
+                <p class="example-explanation">
+                    The loop prints numbers starting from 1 up to 5 by incrementing the <code>count</code> by 1 in each iteration.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>Count: 1<br>Count: 2<br>Count: 3<br>Count: 4<br>Count: 5</p>
+            </div>
+        
+            <div class="example">
+                <h4 class="example-title">Example 2: Using else with while Loop</h4>
+                <p class="topic-text">
+                    The else block executes when the loop condition becomes False.
+                </p>
+                <pre class="code-block">
+x = 3
+while x > 0:
+    print("X:", x)
+    x -= 1
+else:
+    print("Loop finished")
+                </pre>
+                <p class="example-explanation">
+                    After the condition <code>x > 0</code> becomes false, the <code>else</code> block executes and prints a message.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>X: 3<br>X: 2<br>X: 1<br>Loop finished</p>
+            </div>
+        
+            <div class="example">
+                <h4 class="example-title">Example 3: Infinite Loop (with break)</h4>
+                <p class="topic-text">
+                    A while loop runs forever if the condition is always True. We can use <code>break</code> to stop it.
+                </p>
+                <pre class="code-block">
+while True:
+    print("This is an infinite loop")
+    break
+                </pre>
+                <p class="example-explanation">
+                    Although <code>True</code> would create an infinite loop, the <code>break</code> statement immediately exits the loop after the first iteration.
+                </p>
+                <p class="example-output"><strong>Output:</strong> This is an infinite loop</p>
+            </div>
+        
+            <p class="topic-text">
+                <strong>3. Loop Control Statements</strong>
+            </p>
+        
+            <div class="sub-topic">
+                <h3 class="sub-title">A) break Statement</h3>
+                <p class="topic-text">
+                    Stops the loop immediately when a condition is met.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+for num in range(1, 6):
+    if num == 3:
+        break  # Loop stops when num is 3
+    print(num)
+                    </pre>
+                    <p class="example-explanation">
+                        The loop prints numbers 1 and 2. When <code>num</code> equals 3, the <code>break</code> statement stops the loop.
+                    </p>
+                    <p class="example-output"><strong>Output:</strong><br>1<br>2</p>
+                </div>
+            </div>
+        
+            <div class="sub-topic">
+                <h3 class="sub-title">B) continue Statement</h3>
+                <p class="topic-text">
+                    Skips the current iteration and moves to the next one.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+for num in range(1, 6):
+    if num == 3:
+        continue  # Skips when num is 3
+    print(num)
+                    </pre>
+                    <p class="example-explanation">
+                        When <code>num</code> equals 3, the <code>continue</code> statement skips printing and moves to the next number.
+                    </p>
+                    <p class="example-output"><strong>Output:</strong><br>1<br>2<br>4<br>5</p>
+                </div>
+            </div>
+        
+            <div class="sub-topic">
+                <h3 class="sub-title">C) pass Statement</h3>
+                <p class="topic-text">
+                    Used as a placeholder when a loop is required but no code needs to be executed.
+                </p>
+                <div class="example">
+                    <pre class="code-block">
+for num in range(5):
+    pass  # Does nothing
+                    </pre>
+                    <p class="example-explanation">
+                        The <code>pass</code> statement means "do nothing." It allows the code to run without errors even though no action is taken inside the loop.
+                    </p>
+                </div>
+            </div>
+        
+            <p class="topic-text">
+                <strong>4. Nested Loops</strong><br>
+                A loop inside another loop is called a nested loop.
+            </p>
+        
+            <div class="example">
+                <pre class="code-block">
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(i, j)
+                </pre>
+                <p class="example-explanation">
+                    The outer loop (i) runs 3 times, and for each iteration of <code>i</code>, the inner loop (j) also runs 3 times, printing all pairs.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>1 1<br>1 2<br>1 3<br>2 1<br>2 2<br>2 3<br>3 1<br>3 2<br>3 3</p>
+            </div>
+        
+            <p class="topic-text">
+                <strong>5. Example Codes for Loops</strong>
+            </p>
+        
+            <div class="example">
+                <h4 class="example-title">Example 1: Sum of First n Natural Numbers</h4>
+                <pre class="code-block">
+n = int(input("Enter a number: "))
+sum = 0
+for i in range(1, n + 1):
+    sum += i
+print("Sum:", sum)
+                </pre>
+                <p class="example-explanation">
+                    This program calculates the sum of all natural numbers from 1 to <code>n</code> using a <code>for</code> loop.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>Enter a number: 5<br>Sum: 15</p>
+            </div>
+        
+            <div class="example">
+                <h4 class="example-title">Example 2: Factorial of a Number Using while Loop</h4>
+                <pre class="code-block">
+num = int(input("Enter a number: "))
+factorial = 1
+while num > 0:
+    factorial *= num
+    num -= 1
+print("Factorial:", factorial)
+                </pre>
+                <p class="example-explanation">
+                    The code calculates the factorial by multiplying numbers from <code>num</code> down to 1 using a <code>while</code> loop.
+                </p>
+                <p class="example-output"><strong>Output:</strong><br>Enter a number: 5<br>Factorial: 120</p>
+            </div>
+        </section>
+        
+        <section class="topic">
+            <h2 class="topic-title">Mini Project 2: Password Strength Checker</h2>
+            <p class="topic-text">
+                In this project, we will create a program that checks the strength of a password entered by the user.
+                The program will use <strong>loops</strong>, <strong>if-else statements</strong>, and <strong>string methods</strong> to validate the password.
+                It will also allow the user to re-enter the password if it is invalid and limit the number of attempts.
+            </p>
+            <p class="topic-text">
+                <strong>Rules for a Strong Password:</strong>
+            </p>
+            <ul class="topic-text">
+                <li>At least 6 characters long.</li>
+                <li>Must include uppercase and lowercase letters.</li>
+                <li>Must include at least one digit.</li>
+                <li>Must include at least one special character (!, @, #, etc.).</li>
+                <li>Should not contain spaces.</li>
+            </ul>
+            <p class="topic-text">
+                <strong>Maximum Attempts:</strong> 3 tries allowed to enter a valid password.
+            </p>
+            <p class="topic-text">
+                <strong>Tips for creating a strong password:</strong>
+            </p>
+            <ul class="topic-text">
+                <li>Use a mix of uppercase and lowercase letters.</li>
+                <li>Include numbers and special characters.</li>
+                <li>Avoid common words or easily guessable information.</li>
+            </ul>
+            <div class="example">
+                <h4 class="example-title">Code:</h4>
+                <pre class="code-block">
+special_characters = "!@#$%^&*()-+?_=,<>/"
+max_attempts = 3
+attempt = 0
+
+print("🔑 Tips for a strong password:")
+print("- At least 6 characters long")
+print("- Includes uppercase and lowercase letters")
+print("- Includes numbers")
+print("- Includes special characters like !, @, #, etc.")
+print("- No spaces allowed")
+print()
+
+while attempt &lt; max_attempts:
+    password = input("Enter your password: ")
+    
+    has_upper = False
+    has_lower = False
+    has_digit = False
+    has_special = False
+    has_space = False
+
+    for char in password:
+        if char.isupper():
+            has_upper = True
+        elif char.islower():
+            has_lower = True
+        elif char.isdigit():
+            has_digit = True
+        elif char in special_characters:
+            has_special = True
+        elif char.isspace():
+            has_space = True
+
+    if has_space:
+        print("❌ Password should not contain spaces. Try again.\n")
+        attempt += 1
+        continue
+    elif len(password) &lt; 6:
+        print("❌ Password too short! Should be at least 6 characters. Try again.\n")
+        attempt += 1
+        continue
+
+    if has_upper and has_lower and has_digit and has_special:
+        print("✅ Strong Password! Well done!")
+        break
+    elif (has_upper or has_lower) and has_digit:
+        print("⚡ Moderate Password: Try adding special characters for more strength.\n")
+        attempt += 1
+    else:
+        print("⚠️ Weak Password: Add uppercase letters, digits, and special characters.\n")
+        attempt += 1
+
+if attempt == max_attempts:
+    print("\n🚫 Maximum attempts reached! Please try again later.")
+                </pre>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Sample Output:</h4>
+                <p class="example-output">
+                    🔑 Tips for a strong password:<br>
+                    - At least 6 characters long<br>
+                    - Includes uppercase and lowercase letters<br>
+                    - Includes numbers<br>
+                    - Includes special characters like !, @, #, etc.<br>
+                    - No spaces allowed<br><br>
+        
+                    Enter your password: pass word<br>
+                    ❌ Password should not contain spaces. Try again.<br><br>
+        
+                    Enter your password: abc<br>
+                    ❌ Password too short! Should be at least 6 characters. Try again.<br><br>
+        
+                    Enter your password: Hello123<br>
+                    ⚡ Moderate Password: Try adding special characters for more strength.<br><br>
+        
+                    Enter your password: Hello@123<br>
+                    ✅ Strong Password! Well done!
+                </p>
+            </div>
+            <p class="topic-text">
+                <strong>Explanation:</strong><br>
+                The program first shows tips for creating a strong password. 
+                It then asks the user to enter a password. If the password contains spaces or is too short, it asks the user to try again. 
+                Otherwise, it checks if the password includes uppercase and lowercase letters, digits, and special characters.
+                Based on these checks:
+            </p>
+            <ul class="topic-text">
+                <li>If all conditions are met, it prints "Strong Password!"</li>
+                <li>If some conditions are met (like missing special characters), it prints "Moderate Password."</li>
+                <li>If many conditions are missing, it prints "Weak Password."</li>
+            </ul>
+            <p class="topic-text">
+                The program allows up to 3 attempts. If all attempts are used, it displays a message saying "Maximum attempts reached."
+            </p>
+        </section>
+        <section class="topic">
+            <h2 class="topic-title">Mini Project: Rock, Paper, Scissors Game</h2>
+            <p class="topic-text">
+                In this project, we will create a fun game where the computer randomly picks between Rock, Paper, or Scissors, and the user tries to beat it.
+                This project helps beginners practice <strong>if-elif-else</strong> statements, <strong>logical operators</strong>, <strong>user input</strong>, and the <code>random</code> module.
+            </p>
+            <p class="topic-text">
+                <strong>Game Rules:</strong>
+            </p>
+            <ul class="topic-text">
+                <li>Rock beats Scissors</li>
+                <li>Scissors beats Paper</li>
+                <li>Paper beats Rock</li>
+                <li>If both players choose the same, it’s a tie</li>
+            </ul>
+            <div class="example">
+                <h4 class="example-title">Code:</h4>
+                <pre class="code-block">
+import random
+
+# Generate a random number between 0 and 1
+rand_num = random.random()
+
+# Determine computer move using logical operators
+if rand_num >= 0 and rand_num &lt; 1/3:
+computer_move = "rock"
+elif rand_num >= 1/3 and rand_num &lt; 2/3:
+computer_move = "paper"
+else:
+computer_move = "scissors"
+
+# Get user's move
+user_move = input("Enter your move (rock, paper, or scissors): ").lower()
+
+# Validate user input
+if user_move != "rock" and user_move != "paper" and user_move != "scissors":
+print("Invalid move! Please enter rock, paper, or scissors.")
+else:
+print(f"Computer chose: {computer_move}")
+print(f"You chose: {user_move}")
+
+# Determine the winner
+if user_move == computer_move:
+    print("It's a tie!")
+elif (user_move == "rock" and computer_move == "scissors") or \
+        (user_move == "scissors" and computer_move == "paper") or \
+        (user_move == "paper" and computer_move == "rock"):
+    print("You win! 🎉")
+else:
+    print("Computer wins! 😎")
+                </pre>
+            </div>
+            <div class="example">
+                <h4 class="example-title">Sample Output:</h4>
+                <p class="example-output">
+                    Enter your move (rock, paper, or scissors): rock<br>
+                    Computer chose: scissors<br>
+                    You chose: rock<br>
+                    You win! 🎉
+                </p>
+            </div>
+            <p class="topic-text">
+                <strong>Explanation:</strong><br>
+                The computer uses the <code>random.random()</code> function to pick a number between 0 and 1. Logical operators like <code>and</code> and comparison operators like <code>&gt;</code> and <code>&lt;</code> are used to map this number to "rock", "paper", or "scissors". Then the user's input is compared against the computer's choice using <code>if-elif-else</code> to determine the winner.
+            </p>
+        </section>
+        
+
+        <a href="quiz_beginner.html" class="quiz-btn">Take Quiz</a>
+    </div>
+</body>
+</html>

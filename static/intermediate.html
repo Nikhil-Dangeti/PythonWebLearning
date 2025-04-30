@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Python - Functions, Lists, Tuples, Sets, Dictionaries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="quiz_styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="dashboard.html">Home</a></li>
+            <li class="nav-item"><a href="reference.html">References</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Functions in Python -->
+        <h1 class="section-title">Intermediate Python</h1>
+        <section class="topic">
+                <h2 class="topic-title">Functions in Python</h2>
+                <p class="topic-text">Functions are reusable blocks of code that perform a specific task. They help in code organization, modularity, and reusability, making programs more efficient and easier to maintain.</p>
+
+        <h2>1. Types of Functions in Python</h2>
+
+        <h3>a) Built-in Functions</h3>
+        <p>Python provides many predefined functions that perform common tasks. Examples include:</p>
+        <ul>
+            <li><strong>print()</strong> – Displays output on the screen.</li>
+            <li><strong>len()</strong> – Returns the length of an object.</li>
+            <li><strong>type()</strong> – Returns the data type of a variable.</li>
+            <li><strong>sum()</strong> – Adds elements of an iterable.</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <div class="example">
+        <pre class="code-block">
+print(len("Python"))  # Length of the string "Python"
+print(type(10))  # Returns type of the variable (int)
+print(sum([1, 2, 3, 4]))  # Sums the numbers in the list
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>
+6<br>
+&lt;class 'int'&gt;<br>
+10
+        </p>
+</div>
+        <p><strong>len("Python")</strong> returns 6 because "Python" has six characters.<br>
+        <strong>type(10)</strong> returns &lt;class 'int'&gt; indicating 10 is an integer.<br>
+        <strong>sum([1, 2, 3, 4])</strong> returns 10 because 1+2+3+4 = 10.</p>
+
+        <h3>b) User-Defined Functions</h3>
+        <p>A function defined by the user to perform a specific task.</p>
+        <p><strong>Syntax:</strong></p>
+        
+        <pre class="code-block">
+def function_name(parameters):
+    # Function body
+    return value  # (optional)
+        </pre>
+        <p><strong>Example:</strong></p>
+        <div class="example">
+        <pre class="code-block">
+def greet(name):
+    print("Hello,", name)
+
+greet("Nikhil")
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>
+                Hello, Nikhil</p>
+             
+</div>
+        <p>🔹 The function <strong>greet(name)</strong> takes <strong>name</strong> as a parameter and prints a greeting message.<br>
+        🔹 Calling <strong>greet("Nikhil")</strong> outputs "Hello, Nikhil".</p>
+
+        <h3>c) Function with Parameters and Return Value</h3>
+        <p>Functions can take parameters (inputs) and return values.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 10)
+print("Sum:", result)
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>Sum: 15</p>
+        
+        <p class="topic-text">The function <strong>add_numbers(a, b)</strong> adds two numbers and returns the result.<br>
+        The value 15 is stored in <strong>result</strong> and printed.</p>
+
+        <h3>d) Default Parameters</h3>
+        <p class="topic-text">A function parameter can have a default value, which is used if no argument is provided.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+def greet(name="User"):
+    print("Hello,", name)
+
+greet("Alice")  
+greet()  # Uses default value
+        </pre>
+        <p class="example-output"><strong>Output:</strong>
+Hello, Alice<br>
+Hello, User</p>
+        <p class="topic-text">If no argument is given, <strong>name</strong> takes the default value "User".<br>
+         Calling <strong>greet("Alice")</strong> prints "Hello, Alice", while <strong>greet()</strong> prints "Hello, User".</p>
+
+        <h3>e) Variable-Length Arguments (*args, **kwargs)</h3>
+        <p class="topic-text">Python allows functions to accept a variable number of arguments.</p>
+        <ul>
+            <li><strong>*args</strong> – Used for multiple positional arguments.</li>
+            <li><strong>**kwargs</strong> – Used for multiple keyword arguments.</li>
+        </ul>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+def sum_all(*numbers):
+    return sum(numbers)
+
+print(sum_all(1, 2, 3, 4, 5))  # Multiple arguments
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>15</p>
+
+        <p class="topic-text"><ul>
+                <li>The <strong>*numbers</strong> argument allows passing multiple values to <strong>sum_all()</strong>.</li>
+                <li>The function sums all values: 1+2+3+4+5 = 15. </li>
+        </ul>
+        </p>
+
+        <h3>f) Lambda Functions (Anonymous Functions)</h3>
+        <p class="topic-text">A lambda function is a short, one-line function without a name.</p>
+        <p><strong>Syntax:</strong></p>
+        <pre class="code-block">
+lambda arguments: expression
+        </pre>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+square = lambda x: x * x
+print(square(5))
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>25</p>
+
+        <p class="topic-text"><ul><li>The lambda function <strong>lambda x: x * x</strong> squares the input number.</li><li>Calling <strong>square(5)</strong> returns 25.</li></ul>
+        </p>
+
+        <h3>g) Recursive Functions</h3>
+        <p>A function that calls itself to solve a problem recursively.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>20</p>
+        <ul class="topic-text"><li>The function <strong>factorial(n)</strong> calls itself with <strong>n-1</strong> until <strong>n == 0</strong></li>
+        <li>The result is 5 * 4 * 3 * 2 * 1 = 120.</li></ul>
+        <h2>Example Codes for Functions</h2>
+
+        <h3>Example 1: Function to Find Maximum of Three Numbers</h3>
+        <pre class="code-block">
+def find_max(a, b, c):
+    if a > b and a > c:
+        return a
+    elif b > c:
+        return b
+    else:
+        return c
+
+print("Max:", find_max(10, 25, 15))
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>Max: 25</p>
+        <ul class="topic-text"><li>The function <strong>find_max(a, b, c)</strong> compares three numbers and returns the largest.</li>
+        <li>It checks if <strong>a</strong> is the largest, then <strong>b</strong>, and finally <strong>c</strong>.</li>
+<li>In <strong>find_max(10, 25, 15)</strong>, 25 is the largest, so it is returned.</li></ul>
+        <h3>Example 2: Function to Check if a Number is Even or Odd</h3>
+        <pre class="code-block">
+def check_even_odd(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+print(check_even_odd(7))
+print(check_even_odd(12))
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>Odd<br>
+                Even</p>
+        <ul class="topic-text"><li>The function <strong>check_even_odd(num)</strong> checks if a number is divisible by 2.</li>
+        <li>If <strong>num % 2 == 0</strong>, it returns "Even", otherwise "Odd"</li>
+        <li><strong>check_even_odd(7)</strong> returns "Odd", while <strong>check_even_odd(12)</strong> returns "Even".</li></ul>
+
+        </section>
+        
+        <section class="topic">
+        <!-- Lists in Python -->
+        <h1 class="topic-title">Lists in Python</h1>
+        <p class="topic-text">A list is a collection of ordered, mutable, and heterogeneous elements in Python. Lists allow us to store multiple items in a single variable and can hold different data types (integers, strings, floats, etc.).</p>
+        <p ><strong>✅ Lists are:</strong><br>
+        ✔ Ordered – Elements have a defined sequence.<br>
+        ✔ Mutable – We can modify lists (add, remove, update elements).<br>
+        ✔ Heterogeneous – Can store different data types in the same list.<br>
+        ✔ Indexed – Access elements using index numbers (starting from 0).</p>
+
+        <h2>1. Creating Lists</h2>
+        <p class="topic-text">We create lists using square brackets <strong>[ ]</strong> or the <strong>list()</strong> function.</p>
+        <p class="topic-text"><strong>Example:</strong></p>
+        <pre class="code-block">
+# Creating lists
+numbers = [1, 2, 3, 4, 5]  
+fruits = ["apple", "banana", "cherry"]  
+mixed = [10, "Python", 3.14]  
+
+# Using list() function
+empty_list = list()
+
+print(numbers)  
+print(fruits)  
+print(mixed)  
+print(empty_list)  
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>
+                [1, 2, 3, 4, 5]<br>
+                ['apple', 'banana', 'cherry']<br>
+                [10, 'Python', 3.14]<br>
+                []</p>
+
+        <p class="topic-text">
+                <ul>
+                        <li><strong>numbers</strong> contains integers.</li>
+                        <li>fruits</strong> contains strings.</li>
+                        <li>mixed</strong> contains an integer, a string, and a float.</li>
+                        <li>empty_list</strong> is an empty list.</li>
+                </ul>
+
+        <h2>2. Accessing List Elements</h2>
+        <p class="topic-text">We use indexing and slicing to access elements in a list.</p>
+
+        <h3>a) Indexing (Positive & Negative Indexing)</h3>
+        <p class="topic-text">Indexing starts from 0 (left to right) and -1 (right to left).</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+fruits = ["apple", "banana", "cherry", "orange"]
+print(fruits[0])   # First element
+print(fruits[2])   # Third element
+print(fruits[-1])  # Last element
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>
+                apple<br>
+                cherry<br>
+                orange</p>
+        
+        <p class="topic-text">
+                <ul>
+                        <li><strong>fruits[0]</strong> returns "apple".</li>
+                        <li>fruits[2]</strong> returns "cherry".</li>
+                        <li>fruits[-1]</strong> returns "orange" (last element).</li>
+                </ul></p>
+
+        <h3>b) Slicing a List</h3>
+        <p class="topic-text">Slicing allows us to get a sublist using <strong>[start:end:step]</strong>.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+numbers = [10, 20, 30, 40, 50, 60, 70]
+print(numbers[1:4])   # Elements from index 1 to 3
+print(numbers[:3])    # First three elements
+print(numbers[3:])    # From index 3 to end
+print(numbers[::2])   # Every second element
+print(numbers[::-1])  # Reverse the list
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>
+                [20, 30, 40]<br>
+                [10, 20, 30]<br>
+                [40, 50, 60, 70]<br>
+                [10, 30, 50, 70]<br>
+                [70, 60, 50, 40, 30, 20, 10]</p>
+        <p class="topic-text"><ul>
+                <li><strong>numbers[1:4]</strong> gets elements from index 1 to 3.</li>
+                <li><strong>numbers[:3]</strong> gets the first three elements.</li>
+                <li><strong>numbers[::-1]</strong> reverses the list.</ul></p>
+
+        <h2>3. List Operations</h2>
+
+        <h3>a) Adding Elements to a List</h3>
+        <p class="topic-text">We can add elements using:<br>
+        1️⃣ <strong>append()</strong> – Adds element at the end.<br>
+        2️⃣ <strong>insert()</strong> – Adds element at a specific index.<br>
+        3️⃣ <strong>extend()</strong> – Merges another list.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+fruits = ["apple", "banana"]
+fruits.append("cherry")  # Adds "cherry" at the end
+fruits.insert(1, "orange")  # Inserts "orange" at index 1
+more_fruits = ["grape", "mango"]
+fruits.extend(more_fruits)  # Extends list with more_fruits
+
+print(fruits)
+        </pre>
+        <p class="example-output"><strong>Output:</strong><br>
+                ['apple', 'orange', 'banana', 'cherry', 'grape', 'mango']</p>
+        <p class="topic-text">
+        <ul>
+                <li><strong>append("cherry")</strong> adds "cherry" at the end.</li>
+                <li><strong>insert(1, "orange")</strong> adds "orange" at index 1.</li>
+                <li><strong>extend(more_fruits)</strong> merges the two lists.</li>
+        </ul>
+        </p>
+
+        <h3>b) Removing Elements from a List</h3>
+        <p class="topic-text">We can remove elements using:<br>
+        1️⃣ <strong>remove(value)</strong> – Removes first occurrence of a value.<br>
+        2️⃣ <strong>pop(index)</strong> – Removes element at the given index (default: last).<br>
+        3️⃣ <strong>del list[index]</strong> – Deletes element at index.<br>
+        4️⃣ <strong>clear()</strong> – Empties the list.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+fruits = ["apple", "banana", "cherry", "orange"]
+fruits.remove("banana")  # Removes "banana"
+fruits.pop(1)  # Removes element at index 1 ("cherry")
+del fruits[0]  # Deletes first element ("apple")
+fruits.clear()  # Removes all elements
+
+print(fruits)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+[]
+        </pre>
+        <p>🔹 <strong>remove("banana")</strong> deletes "banana".<br>
+        🔹 <strong>pop(1)</strong> removes "cherry".<br>
+        🔹 <strong>clear()</strong> removes all elements.</p>
+
+        <h3>c) Updating List Elements</h3>
+        <p>We can change elements using indexing.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+fruits = ["apple", "banana", "cherry"]
+fruits[1] = "orange"  # Changes "banana" to "orange"
+print(fruits)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+['apple', 'orange', 'cherry']
+        </pre>
+        <p>🔹 <strong>fruits[1] = "orange"</strong> updates index 1 value.</p>
+
+        <h2>4. Common List Methods</h2>
+        <table border="1">
+            <tr><th>Method</th><th>Description</th></tr>
+            <tr><td><strong>append(x)</strong></td><td>Adds x to the end.</td></tr>
+            <tr><td><strong>insert(i, x)</strong></td><td>Inserts x at index i.</td></tr>
+            <tr><td><strong>extend(iterable)</strong></td><td>Merges another list.</td></tr>
+            <tr><td><strong>remove(x)</strong></td><td>Removes first occurrence of x.</td></tr>
+            <tr><td><strong>pop(i)</strong></td><td>Removes item at index i.</td></tr>
+            <tr><td><strong>clear()</strong></td><td>Removes all elements.</td></tr>
+            <tr><td><strong>index(x)</strong></td><td>Returns index of x.</td></tr>
+            <tr><td><strong>count(x)</strong></td><td>Counts occurrences of x.</td></tr>
+            <tr><td><strong>sort()</strong></td><td>Sorts list in ascending order.</td></tr>
+            <tr><td><strong>reverse()</strong></td><td>Reverses list order.</td></tr>
+        </table>
+
+        <h2>Example Codes for Lists</h2>
+
+        <h3>Example 1: Find the Largest Number in a List</h3>
+        <pre class="code-block">
+numbers = [10, 25, 5, 40, 15]
+
+max_value = max(numbers)  # Finds max value
+print("Largest number:", max_value)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+Largest number: 40
+        </pre>
+        <p>🔹 The <strong>max()</strong> function finds the largest value.</p>
+
+        <h3>Example 2: Remove Duplicates from a List</h3>
+        <pre class="code-block">
+numbers = [10, 20, 10, 30, 20, 40]
+unique_numbers = list(set(numbers))  # Convert to set and back to list
+print("Unique numbers:", unique_numbers)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+Unique numbers: [40, 10, 20, 30]
+        </pre>
+        <p>🔹 The <strong>set()</strong> removes duplicates.<br>
+        🔹 Converting back to <strong>list()</strong> retains unique values.</p>
+        </section>
+        <!-- Tuples in Python -->
+        <section class="topic">
+        <h1 class="topic-title">Tuples in Python</h1>
+        <p>A <strong>tuple</strong> is a collection of <strong>ordered, immutable, and heterogeneous elements</strong> in Python. Tuples are similar to lists but <strong>cannot be changed</strong> once created. They are useful for storing fixed data that should not be modified.</p>
+        <p><strong>✅ Tuples are:</strong><br>
+        ✔ <strong>Ordered</strong> – Elements maintain a defined sequence.<br>
+        ✔ <strong>Immutable</strong> – Cannot be changed after creation (no adding/removing elements).<br>
+        ✔ <strong>Heterogeneous</strong> – Can store different data types.<br>
+        ✔ <strong>Indexed</strong> – Access elements using an index (starting from <strong>0</strong>).</p>
+
+        <h2>1. Creating Tuples</h2>
+        <p>Tuples are created using <strong>parentheses <strong>( )</strong></strong> or the <strong>tuple()</strong> function.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+# Creating tuples
+numbers = (1, 2, 3, 4, 5)  
+fruits = ("apple", "banana", "cherry")  
+mixed = (10, "Python", 3.14)  
+
+# Single element tuple (needs a comma)
+single_element = (5,)  
+
+# Using tuple() function
+empty_tuple = tuple()
+
+print(numbers)  
+print(fruits)  
+print(mixed)  
+print(single_element)  
+print(empty_tuple)  
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+(1, 2, 3, 4, 5)
+('apple', 'banana', 'cherry')
+(10, 'Python', 3.14)
+(5,)
+()
+        </pre>
+        <p>🔹 <strong>single_element = (5,)</strong> – A <strong>comma is required</strong> for a single-element tuple.<br>
+        🔹 <strong>empty_tuple = tuple()</strong> – Creates an <strong>empty tuple</strong>.</p>
+
+        <h2>2. Accessing Tuple Elements</h2>
+        <p>We use <strong>indexing</strong> and <strong>slicing</strong> to access tuple elements.</p>
+
+        <h3>a) Indexing (Positive & Negative Indexing)</h3>
+        <p>Tuples support both <strong>positive (left to right)</strong> and <strong>negative (right to left)</strong> indexing.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+fruits = ("apple", "banana", "cherry", "orange")
+print(fruits[0])   # First element
+print(fruits[2])   # Third element
+print(fruits[-1])  # Last element
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+apple
+cherry
+orange
+        </pre>
+        <p>🔹 <strong>fruits[0]</strong> returns "apple".<br>
+        🔹 <strong>fruits[2]</strong> returns "cherry".<br>
+        🔹 <strong>fruits[-1]</strong> returns "orange" (last element).</p>
+
+        <h3>b) Slicing a Tuple</h3>
+        <p>We can extract <strong>a sub-tuple</strong> using slicing <strong>[start:end:step]</strong>.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+numbers = (10, 20, 30, 40, 50, 60, 70)
+print(numbers[1:4])   # Elements from index 1 to 3
+print(numbers[:3])    # First three elements
+print(numbers[3:])    # From index 3 to end
+print(numbers[::2])   # Every second element
+print(numbers[::-1])  # Reverse the tuple
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+(20, 30, 40)
+(10, 20, 30)
+(40, 50, 60, 70)
+(10, 30, 50, 70)
+(70, 60, 50, 40, 30, 20, 10)
+        </pre>
+        <p>🔹 <strong>numbers[::-1]</strong> reverses the tuple.</p>
+
+        <h2>3. Tuple Operations</h2>
+
+        <h3>a) Concatenation & Repetition</h3>
+        <p>We can <strong>join</strong> and <strong>repeat</strong> tuples using <strong>+</strong> and <strong>*</strong>.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+
+new_tuple = tuple1 + tuple2  # Concatenation
+repeated_tuple = tuple1 * 3  # Repetition
+
+print(new_tuple)
+print(repeated_tuple)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+(1, 2, 3, 4, 5, 6)
+(1, 2, 3, 1, 2, 3, 1, 2, 3)
+        </pre>
+        <p>🔹 <strong>tuple1 + tuple2</strong> joins the two tuples.<br>
+        🔹 <strong>tuple1 * 3</strong> repeats the tuple 3 times.</p>
+
+        <h3>b) Checking Element Existence</h3>
+        <p>We use the <strong>in</strong> keyword to check if an element exists in a tuple.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+fruits = ("apple", "banana", "cherry")
+print("banana" in fruits)  # True
+print("mango" in fruits)   # False
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+True
+False
+        </pre>
+        <p>🔹 <strong>"banana" in fruits</strong> returns <strong>True</strong>.</p>
+
+        <h2>4. Common Tuple Methods</h2>
+        <p>Since tuples are <strong>immutable</strong>, they have <strong>limited methods</strong> compared to lists.</p>
+        <table border="1">
+            <tr><th>Method</th><th>Description</th></tr>
+            <tr><td><strong>count(x)</strong></td><td>Counts occurrences of <strong>x</strong> in the tuple.</td></tr>
+            <tr><td><strong>index(x)</strong></td><td>Returns the index of <strong>x</strong>.</td></tr>
+        </table>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+numbers = (10, 20, 30, 10, 40, 10)
+print(numbers.count(10))   # Count occurrences of 10
+print(numbers.index(30))   # Find index of 30
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+3
+2
+        </pre>
+        <p>🔹 <strong>count(10)</strong> returns <strong>3</strong> because <strong>10</strong> appears <strong>three times</strong>.<br>
+        🔹 <strong>index(30)</strong> returns <strong>2</strong>, which is the <strong>index of <strong>30</strong></strong>.</p>
+
+        <h2>5. Tuple Packing & Unpacking</h2>
+
+        <h3>a) Tuple Packing</h3>
+        <p>Packing means <strong>storing multiple values in a tuple</strong>.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+person = ("John", 25, "Engineer")
+print(person)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+('John', 25, 'Engineer')
+        </pre>
+        <p>🔹 The <strong>person</strong> tuple stores three values.</p>
+
+        <h3>b) Tuple Unpacking</h3>
+        <p>We can extract values from a tuple into variables.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+person = ("John", 25, "Engineer")
+name, age, profession = person  # Unpacking
+print(name)
+print(age)
+print(profession)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+John
+25
+Engineer
+        </pre>
+        <p>🔹 <strong>name</strong>, <strong>age</strong>, and <strong>profession</strong> store values from <strong>person</strong>.</p>
+
+        <h2>Example Codes for Tuples</h2>
+
+        <h3>Example 1: Swapping Two Variables Using Tuples</h3>
+        <pre class="code-block">
+a = 10
+b = 20
+
+a, b = b, a  # Swapping values
+
+print("a =", a)
+print("b =", b)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+a = 20
+b = 10
+        </pre>
+        <p>🔹 <strong>Tuple swapping</strong> makes swapping easy.</p>
+
+        <h3>Example 2: Returning Multiple Values from a Function</h3>
+        <pre class="code-block">
+def get_dimensions():
+    width = 15
+    height = 10
+    return width, height  # Returning a tuple
+
+dimensions = get_dimensions()
+print(dimensions)
+print("Width:", dimensions[0])
+print("Height:", dimensions[1])
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+(15, 10)
+Width: 15
+Height: 10
+        </pre>
+        <p>🔹 <strong>Functions return multiple values as tuples</strong>.</p>
+
+        <h2>Key Takeaways</h2>
+        <p>✅ Tuples are <strong>ordered, immutable, and heterogeneous</strong>.<br>
+        ✅ We use <strong>indexing and slicing</strong> to access elements.<br>
+        ✅ <strong>Concatenation & repetition</strong> allow modifying tuple contents indirectly.<br>
+        ✅ <strong>Tuple packing & unpacking</strong> simplify variable assignments.</p>
+</section>
+        <!-- Sets in Python -->
+<section class="topic">
+        <h1 class="topic-title">Sets in Python</h1>
+        <p>A set is an unordered, mutable, and unindexed collection of unique elements in Python. Sets are useful when you need to store distinct values and perform mathematical set operations like union, intersection, and difference.</p>
+        <p><strong>✅ Sets are:</strong><br>
+        ✔ Unordered – Elements have no fixed order.<br>
+        ✔ Mutable – We can add or remove elements.<br>
+        ✔ Unique – No duplicate values.<br>
+        ✔ Unindexed – Elements cannot be accessed by index.</p>
+
+        <h2>1. Creating Sets</h2>
+        <p>Sets are created using curly braces <strong>{}</strong> or the <strong>set()</strong> function.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+# Creating sets
+numbers = {1, 2, 3, 4, 5}
+fruits = {"apple", "banana", "cherry"}
+mixed = {10, "Python", 3.14}
+
+# Using set() function
+empty_set = set()  # Creates an empty set (not {} because {} creates a dictionary)
+
+print(numbers)
+print(fruits)
+print(mixed)
+print(empty_set)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{1, 2, 3, 4, 5}
+{'banana', 'cherry', 'apple'}
+{10, 'Python', 3.14}
+set()
+        </pre>
+        <p>🔹 Order is not guaranteed in sets.<br>
+        🔹 <strong>{}</strong> creates a dictionary, so use <strong>set()</strong> for an empty set.</p>
+
+        <h2>2. Accessing Set Elements</h2>
+        <p>Since sets are unordered and unindexed, elements cannot be accessed using indexing or slicing. Instead, we check for membership using the <strong>in</strong> keyword.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+fruits = {"apple", "banana", "cherry"}
+print("banana" in fruits)  # True
+print("mango" in fruits)   # False
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+True
+False
+        </pre>
+        <p>🔹 We cannot access elements by index like <strong>fruits[0]</strong>.</p>
+
+        <h2>3. Modifying Sets</h2>
+
+        <h3>a) Adding Elements</h3>
+        <p>We use <strong>add()</strong> to insert a single element and <strong>update()</strong> to add multiple elements.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+numbers = {1, 2, 3}
+numbers.add(4)  # Adding a single element
+numbers.update([5, 6, 7])  # Adding multiple elements
+
+print(numbers)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{1, 2, 3, 4, 5, 6, 7}
+        </pre>
+        <p>🔹 <strong>add()</strong> adds a single element.<br>
+        🔹 <strong>update()</strong> adds multiple elements from a list/tuple.</p>
+
+        <h3>b) Removing Elements</h3>
+        <p>We use <strong>remove()</strong>, <strong>discard()</strong>, or <strong>pop()</strong> to remove elements.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+numbers = {1, 2, 3, 4, 5}
+
+numbers.remove(3)  # Removes 3 (error if not found)
+numbers.discard(6) # No error if 6 is not found
+removed_element = numbers.pop()  # Removes a random element
+
+print(numbers)
+print("Removed:", removed_element)
+        </pre>
+        <p><strong>Output (may vary):</strong></p>
+        <pre class="code-block">
+{2, 4, 5}
+Removed: 1
+        </pre>
+        <p>🔹 <strong>remove(x)</strong> raises an error if <strong>x</strong> is not found.<br>
+        🔹 <strong>discard(x)</strong> does not raise an error if <strong>x</strong> is missing.<br>
+        🔹 <strong>pop()</strong> removes a random element.</p>
+
+        <h2>4. Set Operations</h2>
+        <p>Python provides built-in operations for union, intersection, difference, and symmetric difference.</p>
+
+        <h3>a) Union (<strong>|</strong> or <strong>union()</strong>)</h3>
+        <p>Combines all elements from both sets (no duplicates).</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+union_set = set1 | set2  # Using | operator
+# union_set = set1.union(set2)  # Alternative way
+
+print(union_set)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{1, 2, 3, 4, 5}
+        </pre>
+        <p>🔹 Combines elements from both sets.</p>
+
+        <h3>b) Intersection (<strong>&</strong> or <strong>intersection()</strong>)</h3>
+        <p>Finds common elements between two sets.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+intersection_set = set1 & set2  # Using & operator
+# intersection_set = set1.intersection(set2)  # Alternative way
+
+print(intersection_set)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{3}
+        </pre>
+        <p>🔹 Only common elements are included.</p>
+
+        <h3>c) Difference (<strong>-</strong> or <strong>difference()</strong>)</h3>
+        <p>Finds elements present in one set but not in another.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+difference_set = set1 - set2  # Using - operator
+# difference_set = set1.difference(set2)  # Alternative way
+
+print(difference_set)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{1, 2}
+        </pre>
+        <p>🔹 Elements only in <strong>set1</strong>, not in <strong>set2</strong>.</p>
+
+        <h3>d) Symmetric Difference (<strong>^</strong> or <strong>symmetric_difference()</strong>)</h3>
+        <p>Finds elements not common in both sets.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+sym_diff_set = set1 ^ set2  # Using ^ operator
+# sym_diff_set = set1.symmetric_difference(set2)  # Alternative way
+
+print(sym_diff_set)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{1, 2, 4, 5}
+        </pre>
+        <p>🔹 Excludes common elements (3).</p>
+
+        <h2>5. Set Methods</h2>
+        <table border="1">
+            <tr><th>Method</th><th>Description</th></tr>
+            <tr><td><strong>add(x)</strong></td><td>Adds an element <strong>x</strong> to the set.</td></tr>
+            <tr><td><strong>update(iterable)</strong></td><td>Adds multiple elements from an iterable.</td></tr>
+            <tr><td><strong>remove(x)</strong></td><td>Removes <strong>x</strong> (raises an error if <strong>x</strong> is missing).</td></tr>
+            <tr><td><strong>discard(x)</strong></td><td>Removes <strong>x</strong> (no error if <strong>x</strong> is missing).</td></tr>
+            <tr><td><strong>pop()</strong></td><td>Removes and returns a random element.</td></tr>
+            <tr><td><strong>clear()</strong></td><td>Removes all elements from the set.</td></tr>
+            <tr><td><strong>union(set2)</strong></td><td>Returns a new set with elements from both sets.</td></tr>
+            <tr><td><strong>intersection(set2)</strong></td><td>Returns a new set with common elements.</td></tr>
+            <tr><td><strong>difference(set2)</strong></td><td>Returns a new set with elements in <strong>set1</strong> but not <strong>set2</strong>.</td></tr>
+            <tr><td><strong>symmetric_difference(set2)</strong></td><td>Returns a set with elements in either but not both.</td></tr>
+        </table>
+
+        <h2>6. Example Applications of Sets</h2>
+
+        <h3>Example 1: Removing Duplicates from a List</h3>
+        <pre class="code-block">
+numbers = [1, 2, 3, 3, 4, 4, 5]
+unique_numbers = set(numbers)  # Convert list to set
+
+print(unique_numbers)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{1, 2, 3, 4, 5}
+        </pre>
+        <p>🔹 Sets automatically remove duplicates.</p>
+
+        <h3>Example 2: Finding Common Elements in Two Lists</h3>
+        <pre class="code-block">
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+
+common_elements = set(list1) & set(list2)  # Using intersection
+
+print(common_elements)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{3, 4}
+        </pre>
+        <p>🔹 Fast way to find common elements.</p>
+</section>
+<section class="topic">
+        <!-- Dictionaries in Python -->
+        <h1 class="topic-title">Dictionaries in Python 📝</h1>
+        <p>A dictionary in Python is an unordered, mutable, and indexed collection of key-value pairs. It is one of the most powerful and widely used data structures in Python. Dictionaries allow fast lookups, modifications, and deletions of values based on their unique keys.</p>
+        <p><strong>✅ Features of Dictionaries</strong><br>
+        ✔ Unordered – The items do not maintain any specific order (Python 3.6+ preserves insertion order).<br>
+        ✔ Mutable – You can add, modify, or remove elements.<br>
+        ✔ Indexed by keys – Instead of numerical indexes (like lists/tuples), dictionaries use unique keys to access values.<br>
+        ✔ Heterogeneous – Can store different data types as values.<br>
+        ✔ No duplicate keys – Each key must be unique, but values can be duplicated.</p>
+
+        <h2>1. Creating a Dictionary</h2>
+        <p>Dictionaries are created using curly braces <strong>{}</strong> or the <strong>dict()</strong> constructor.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+# Creating a dictionary
+student = {
+    "name": "Alice",
+    "age": 21,
+    "grade": "A",
+    "courses": ["Math", "Physics"],
+}
+
+print(student)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{'name': 'Alice', 'age': 21, 'grade': 'A', 'courses': ['Math', 'Physics']}
+        </pre>
+        <p>🔹 Keys ("name", "age", "grade", "courses") must be unique and immutable (strings, numbers, tuples).<br>
+        🔹 Values ("Alice", 21, "A", ["Math", "Physics"]) can be of any data type.</p>
+
+        <h2>2. Accessing Dictionary Elements</h2>
+        <p>We can access values using keys with square brackets <strong>[]</strong> or the <strong>get()</strong> method.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+student = {"name": "Alice", "age": 21, "grade": "A"}
+
+# Using square brackets []
+print(student["name"])  # Alice
+
+# Using get() method (avoids KeyError if key is missing)
+print(student.get("age"))  # 21
+print(student.get("gender", "Not specified"))  # Default value
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+Alice
+21
+Not specified
+        </pre>
+        <p>🔹 <strong>student["name"]</strong> returns "Alice".<br>
+        🔹 <strong>student.get("gender", "Not specified")</strong> returns "Not specified" because "gender" does not exist.</p>
+
+        <h2>3. Modifying Dictionary Elements</h2>
+        <p>We can update values using keys and add new key-value pairs.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+student = {"name": "Alice", "age": 21, "grade": "A"}
+
+# Updating existing value
+student["age"] = 22  
+
+# Adding a new key-value pair
+student["city"] = "New York"
+
+print(student)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{'name': 'Alice', 'age': 22, 'grade': 'A', 'city': 'New York'}
+        </pre>
+        <p>🔹 <strong>student["age"] = 22</strong> updates "age" from 21 to 22.<br>
+        🔹 <strong>student["city"] = "New York"</strong> adds a new entry.</p>
+
+        <h2>4. Dictionary Methods</h2>
+
+        <h3>a) <strong>keys()</strong>, <strong>values()</strong>, and <strong>items()</strong></h3>
+        <p>These methods retrieve keys, values, and key-value pairs.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+student = {"name": "Alice", "age": 21, "grade": "A"}
+
+print(student.keys())    # dict_keys(['name', 'age', 'grade'])
+print(student.values())  # dict_values(['Alice', 21, 'A'])
+print(student.items())   # dict_items([('name', 'Alice'), ('age', 21), ('grade', 'A')])
+        </pre>
+        <p>🔹 <strong>keys()</strong> returns a list-like object of keys.<br>
+        🔹 <strong>values()</strong> returns a list-like object of values.<br>
+        🔹 <strong>items()</strong> returns key-value pairs as tuples.</p>
+
+        <h3>b) <strong>update()</strong> – Merging Dictionaries</h3>
+        <p>We can update an existing dictionary with another dictionary.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+student = {"name": "Alice", "age": 21}
+extra_info = {"grade": "A", "city": "New York"}
+
+student.update(extra_info)
+print(student)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{'name': 'Alice', 'age': 21, 'grade': 'A', 'city': 'New York'}
+        </pre>
+        <p>🔹 <strong>update()</strong> merges two dictionaries.<br>
+        🔹 If keys overlap, values from <strong>extra_info</strong> replace existing ones.</p>
+
+        <h3>c) <strong>pop()</strong> & <strong>popitem()</strong> – Removing Elements</h3>
+        <p>We can remove elements using <strong>pop()</strong> (specific key) or <strong>popitem()</strong> (last inserted item).</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+student = {"name": "Alice", "age": 21, "grade": "A"}
+
+# Removing a specific key
+age = student.pop("age")
+print(age)  # 21
+
+# Removing the last inserted item
+last_item = student.popitem()
+print(last_item)  # ('grade', 'A')
+
+print(student)  # {'name': 'Alice'}
+        </pre>
+        <p>🔹 <strong>pop("age")</strong> removes "age" and returns its value.<br>
+        🔹 <strong>popitem()</strong> removes and returns the last inserted key-value pair.</p>
+
+        <h2>5. Looping Through Dictionaries</h2>
+        <p>We can iterate over dictionary keys, values, or key-value pairs.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+student = {"name": "Alice", "age": 21, "grade": "A"}
+
+# Loop through keys
+for key in student:
+    print(key, ":", student[key])
+
+# Loop through key-value pairs
+for key, value in student.items():
+    print(f"{key} -> {value}")
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+name : Alice
+age : 21
+grade : A
+name -> Alice
+age -> 21
+grade -> A
+        </pre>
+        <p>🔹 <strong>for key in student:</strong> iterates over keys.<br>
+        🔹 <strong>for key, value in student.items():</strong> iterates over key-value pairs.</p>
+
+        <h2>6. Dictionary Comprehensions</h2>
+        <p>Python allows creating dictionaries using dictionary comprehension.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+squares = {x: x**2 for x in range(1, 6)}
+print(squares)
+        </pre>
+        <p><strong>Output:</strong></p>
+        <pre class="code-block">
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+        </pre>
+        <p>🔹 <strong>{x: x**2 for x in range(1, 6)}</strong> generates a dictionary of squares.</p>
+
+        <h2>7. Nested Dictionaries</h2>
+        <p>Dictionaries can contain other dictionaries as values.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+students = {
+    "Alice": {"age": 21, "grade": "A"},
+    "Bob": {"age": 22, "grade": "B"},
+}
+
+print(students["Alice"]["grade"])  # A
+        </pre>
+        <p>🔹 <strong>students["Alice"]["grade"]</strong> returns "A" from nested dictionaries.</p>
+
+        <h2>8. Using <strong>defaultdict</strong> for Missing Keys</h2>
+        <p><strong>defaultdict</strong> (from <strong>collections</strong> module) avoids <strong>KeyError</strong> by providing a default value for missing keys.</p>
+        <p><strong>Example:</strong></p>
+        <pre class="code-block">
+from collections import defaultdict
+
+# Default value for missing keys is an empty list
+scores = defaultdict(list)
+
+scores["Alice"].append(95)
+scores["Bob"].append(88)
+
+print(scores)
+        </pre>
+        <p class="example-output"><strong>Output:</strong>
+        <br>
+defaultdict(&lt;class 'list'&gt;, {'Alice': [95], 'Bob': [88]})
+</p>    
+        <p>🔹 <strong>defaultdict(list)</strong> initializes missing keys with an empty list.</p>
+</section>
+        <a href="quiz_intermediate.html" class="quiz-btn">Take Quiz</a>
+</div>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Python Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-box {
+            background-color:#00C4B4;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            line-height: 1.6;
+            color: black;
+            text-align: center;
+        }
+        .profile-box p strong {
+            color: rgb(203, 210, 220);
+        }
+        .logout-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color:#007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .logout-btn:hover {
+            background-color: rgb(13, 13, 155);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="dashboard.html">Home</a></li>
+            <li class="nav-item"><a href="reference.html">References</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard">
+        <h1 class="section-title">User Profile</h1>
+        <div class="profile-box">
+            <p><strong>Name:</strong> <span id="user-name"></span></p>
+            <p><strong>Email:</strong> <span id="user-email"></span></p>
+            <p><strong>College:</strong> <span id="user-college"></span></p>
+
+            <!-- Logout Button -->
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.getElementById('user-name').textContent = user.name || 'N/A';
+            document.getElementById('user-email').textContent = user.email || 'N/A';
+            document.getElementById('user-college').textContent = user.college || 'N/A';
+        } else {
+            alert("No user data found. Please log in.");
+            window.location.href = 'index.html';
+        }
+
+        function logout() {
+            localStorage.removeItem('user'); // Clear user data
+            window.location.href = 'index.html'; // Redirect to login page
+        }
+    </script>
+</body>
+</html>

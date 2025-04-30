@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Quiz - Python Learning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="dashboard.html">Home</a></li>
+            <li class="nav-item"><a href="reference.html">References</a></li>
+            <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1 class="section-title">Beginner Python Quiz</h1>
+        <form id="quizForm" onsubmit="calculateScore(event)">
+            <div class="question">
+                <p><strong>1. What type of loop is used when the number of iterations is known?</strong></p>
+                <div class="option"><input type="radio" name="q1" value="a"> <span>a) while loop</span></div>
+                <div class="option"><input type="radio" name="q1" value="b"> <span>b) for loop</span></div>
+                <div class="option"><input type="radio" name="q1" value="c"> <span>c) Infinite loop</span></div>
+                <div class="option"><input type="radio" name="q1" value="d"> <span>d) do-while loop</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>2. What will be the output of the following code?</strong></p>
+                <pre class="code-block">
+for i in range(3):
+    print(i)
+else: 
+    print("Loop finished!")
+                </pre>
+                <div class="option"><input type="radio" name="q2" value="a"> <span>a) 0 1 2</span></div>
+                <div class="option"><input type="radio" name="q2" value="b"> <span>b) 0 1 2 Loop finished!</span></div>
+                <div class="option"><input type="radio" name="q2" value="c"> <span>c) 0 1 2 3 Loop finished!</span></div>
+                <div class="option"><input type="radio" name="q2" value="d"> <span>d) Infinite loop</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>3. Which statement is used to skip the current iteration and continue with the next one?</strong></p>
+                <div class="option"><input type="radio" name="q3" value="a"> <span>a) break</span></div>
+                <div class="option"><input type="radio" name="q3" value="b"> <span>b) continue</span></div>
+                <div class="option"><input type="radio" name="q3" value="c"> <span>c) pass</span></div>
+                <div class="option"><input type="radio" name="q3" value="d"> <span>d) skip</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>4. What will be the output of the following code?</strong></p>
+                <pre class="code-block">
+count = 1
+while count < 4:   
+    print(count)   
+    count += 1
+                </pre>
+                <div class="option"><input type="radio" name="q4" value="a"> <span>a) 1 2 3</span></div>
+                <div class="option"><input type="radio" name="q4" value="b"> <span>b) 1 2 3 4</span></div>
+                <div class="option"><input type="radio" name="q4" value="c"> <span>c) 0 1 2 3</span></div>
+                <div class="option"><input type="radio" name="q4" value="d"> <span>d) Infinite loop</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>5. What happens if the condition in a while loop is always True and there is no break statement?</strong></p>
+                <div class="option"><input type="radio" name="q5" value="a"> <span>a) Loop executes once</span></div>
+                <div class="option"><input type="radio" name="q5" value="b"> <span>b) Syntax error</span></div>
+                <div class="option"><input type="radio" name="q5" value="c"> <span>c) Infinite loop</span></div>
+                <div class="option"><input type="radio" name="q5" value="d"> <span>d) The loop will not execute</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>6. How do you correctly use a for loop to iterate over a string?</strong></p>
+                <div class="option"><input type="radio" name="q6" value="a"> <span>a) for char in "Python":</span></div>
+                <div class="option"><input type="radio" name="q6" value="b"> <span>b) for i in range("Python"):</span></div>
+                <div class="option"><input type="radio" name="q6" value="c"> <span>c) for i in "Python".range():</span></div>
+                <div class="option"><input type="radio" name="q6" value="d"> <span>d) for i in range(len("Python")):</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>7. What does the pass statement do in a loop?</strong></p>
+                <div class="option"><input type="radio" name="q7" value="a"> <span>a) Skips the rest of the loop</span></div>
+                <div class="option"><input type="radio" name="q7" value="b"> <span>b) Ends the loop</span></div>
+                <div class="option"><input type="radio" name="q7" value="c"> <span>c) Does nothing (acts as a placeholder)</span></div>
+                <div class="option"><input type="radio" name="q7" value="d"> <span>d) Skips the current iteration</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>8. What is the output of the following code?</strong></p>
+                <pre class="code-block">
+for i in range(1, 5, 2):    
+    print(i)
+                </pre>
+                <div class="option"><input type="radio" name="q8" value="a"> <span>a) 1 2 3 4</span></div>
+                <div class="option"><input type="radio" name="q8" value="b"> <span>b) 1 3</span></div>
+                <div class="option"><input type="radio" name="q8" value="c"> <span>c) 2 4</span></div>
+                <div class="option"><input type="radio" name="q8" value="d"> <span>d) 1 2 3</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>9. How many times will the loop run?</strong></p>
+                <pre class="code-block">
+for i in range(3, 10, 2):    
+    print(i)
+                </pre>
+                <div class="option"><input type="radio" name="q9" value="a"> <span>a) 3 times</span></div>
+                <div class="option"><input type="radio" name="q9" value="b"> <span>b) 4 times</span></div>
+                <div class="option"><input type="radio" name="q9" value="c"> <span>c) 5 times</span></div>
+                <div class="option"><input type="radio" name="q9" value="d"> <span>d) 6 times</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>10. What is the correct syntax for a while loop?</strong></p>
+                <div class="option"><input type="radio" name="q10" value="a"> <span>a) while (i < 5) {}</span></div>
+                <div class="option"><input type="radio" name="q10" value="b"> <span>b) while i < 5:</span></div>
+                <div class="option"><input type="radio" name="q10" value="c"> <span>c) while i < 5</span></div>
+                <div class="option"><input type="radio" name="q10" value="d"> <span>d) loop while i < 5:</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>11. Which loop executes at least once, even if the condition is false?</strong></p>
+                <div class="option"><input type="radio" name="q11" value="a"> <span>a) for loop</span></div>
+                <div class="option"><input type="radio" name="q11" value="b"> <span>b) while loop</span></div>
+                <div class="option"><input type="radio" name="q11" value="c"> <span>c) do-while loop</span></div>
+                <div class="option"><input type="radio" name="q11" value="d"> <span>d) None of the above</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>12. Which of the following is used to iterate over a dictionary?</strong></p>
+                <div class="option"><input type="radio" name="q12" value="a"> <span>a) for key in dict:</span></div>
+                <div class="option"><input type="radio" name="q12" value="b"> <span>b) for key in dict.keys():</span></div>
+                <div class="option"><input type="radio" name="q12" value="c"> <span>c) for key, value in dict.items():</span></div>
+                <div class="option"><input type="radio" name="q12" value="d"> <span>d) All of the above</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>13. What will be the output of this nested loop?</strong></p>
+                <pre class="code-block">
+for i in range(2):  
+    for j in range(2):  
+        print(i, j)
+</pre>
+                <div class="option"><input type="radio" name="q13" value="a"> <span>a) (0,0) (1,1)</span></div>
+                <div class="option"><input type="radio" name="q13" value="b"> <span>b) (0,0) (0,1) (1,0) (1,1)</span></div>
+                <div class="option"><input type="radio" name="q13" value="c"> <span>c) (0,0) (0,1)</span></div>
+                <div class="option"><input type="radio" name="q13" value="d"> <span>d) (1,0) (1,1)</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>14. What will the following code print?</strong></p>
+                <pre class="code-block">
+for i in range(3):
+    if i == 1:       
+        break   
+    print(i)</pre>
+                <div class="option"><input type="radio" name="q14" value="a"> <span>a) 0 1 2</span></div>
+                <div class="option"><input type="radio" name="q14" value="b"> <span>b) 0</span></div>
+                <div class="option"><input type="radio" name="q14" value="c"> <span>c) 1</span></div>
+                <div class="option"><input type="radio" name="q14" value="d"> <span>d) No output</span></div>
+            </div>
+
+            <div class="question">
+                <p><strong>15. What will happen if break is used inside a while loop?</strong></p>
+                <div class="option"><input type="radio" name="q15" value="a"> <span>a) Terminates the loop immediately</span></div>
+                <div class="option"><input type="radio" name="q15" value="b"> <span>b) Skips the next iteration</span></div>
+                <div class="option"><input type="radio" name="q15" value="c"> <span>c) Skips the rest of the code in the current iteration</span></div>
+                <div class="option"><input type="radio" nameI="q15" value="d"> <span>d) Throws an error</span></div>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+
+        <!-- Popup for Score -->
+        <div id="scorePopup" class="popup">
+            <div class="popup-content">
+                <h2>Your Score</h2>
+                <p id="scoreDisplay"></p>
+                <div class="button-container">
+                    <button onclick="showAnswers()">View Answers</button>
+                    <button onclick="window.location.href='beginner.html'">Exit</button>
+                    <button onclick="window.location.href='quiz_beginner.html'">Reattempt</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Answers Popup -->
+        <div id="answersPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="hideAnswers()">×</span>
+                <h2>Your Answers</h2>
+                <div id="answersDisplay"></div>
+                <div class="button-container">
+                    <button onclick="hideAnswers()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'b', // for loop
+            q2: 'b', // 0 1 2 Loop finished!
+            q3: 'b', // continue
+            q4: 'a', // 1 2 3
+            q5: 'c', // Infinite loop
+            q6: 'a', // for char in "Python":
+            q7: 'c', // Does nothing (acts as a placeholder)
+            q8: 'b', // 1 3
+            q9: 'b', // 4 times
+            q10: 'b', // while i < 5:
+            q11: 'd', // None of the above
+            q12: 'd', // All of the above
+            q13: 'b', // (0,0) (0,1) (1,0) (1,1)
+            q14: 'b', // 0
+            q15: 'a' // Terminates the loop immediately
+        };
+
+        function calculateScore(event) {
+            event.preventDefault();
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const userAnswers = {
+                q1: form.q1.value,
+                q2: form.q2.value,
+                q3: form.q3.value,
+                q4: form.q4.value,
+                q5: form.q5.value,
+                q6: form.q6.value,
+                q7: form.q7.value,
+                q8: form.q8.value,
+                q9: form.q9.value,
+                q10: form.q10.value,
+                q11: form.q11.value,
+                q12: form.q12.value,
+                q13: form.q13.value,
+                q14: form.q14.value,
+                q15: form.q15.value
+            };
+
+            for (let q in answers) {
+                if (userAnswers[q] === answers[q]) score++;
+            }
+
+            const scorePopup = document.getElementById('scorePopup');
+            document.getElementById('scoreDisplay').textContent = `Your score: ${score} out of 15`;
+            scorePopup.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function showAnswers() {
+            const scorePopup = document.getElementById('scorePopup');
+            const answersPopup = document.getElementById('answersPopup');
+            const answersDisplay = document.getElementById('answersDisplay');
+            const form = document.getElementById('quizForm');
+            const userAnswers = {
+                q1: form.q1.value,
+                q2: form.q2.value,
+                q3: form.q3.value,
+                q4: form.q4.value,
+                q5: form.q5.value,
+                q6: form.q6.value,
+                q7: form.q7.value,
+                q8: form.q8.value,
+                q9: form.q9.value,
+                q10: form.q10.value,
+                q11: form.q11.value,
+                q12: form.q12.value,
+                q13: form.q13.value,
+                q14: form.q14.value,
+                q15: form.q15.value
+            };
+
+            answersDisplay.innerHTML = '';
+            for (let q in answers) {
+                const questionNum = q.replace('q', '');
+                const userAnswer = userAnswers[q] ? userAnswers[q] : 'Not answered';
+                const isCorrect = userAnswer === answers[q];
+                const answerClass = isCorrect ? 'correct' : 'wrong';
+                answersDisplay.innerHTML += `
+                    <p><strong>Question ${questionNum}:</strong> ${document.querySelector(`input[name="${q}"][value="${answers[q]}"]`).parentElement.querySelector('span').textContent.trim()} <span class="${answerClass}">${isCorrect ? 'Correct' : 'Wrong'}</span><br>
+                    Your answer: ${userAnswer === 'Not answered' ? 'Not answered' : document.querySelector(`input[name="${q}"][value="${userAnswer}"]`).parentElement.querySelector('span').textContent.trim()}</p>
+                `;
+            }
+            scorePopup.style.display = 'none';
+            answersPopup.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function hideAnswers() {
+            const answersPopup = document.getElementById('answersPopup');
+            const scorePopup = document.getElementById('scorePopup');
+            answersPopup.style.display = 'none';
+            scorePopup.style.display = 'flex';
+            document.body.style.overflow = 'auto'; // Restore background scrolling
+        }
+
+        // Close popups when navigating away
+        window.addEventListener('beforeunload', () => {
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+</body>
+</html>
